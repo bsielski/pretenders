@@ -225,6 +225,16 @@ body {
     width: 2.4em;
     margin: 0;
 }
+
+
+.value-picker__input--positive{
+    color: #22dd22;
+}
+
+.value-picker__input--negative{
+    color: #dd2222;
+}
+
 .value-picker__input--dominion {
     
 }

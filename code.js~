@@ -457,7 +457,6 @@
 	}
 	
 	const nationUpdate = () => {
-	    colorizeHeat(nationPicker.value, heatInput)
 	    setCurrentPretenders()
 	    calculatePretenders()
 	    printPretenders()
@@ -536,7 +535,6 @@
 
 	const heatUpdate = () => {
 	    calculatePretenders()
-	    colorizeHeat(nationPicker.value, heatInput)
 	    printPretenders()
 	}
 
@@ -548,27 +546,6 @@
 	const imprisonmentUpdate = (event) => {
 	    setImprisonment()
 	    updateImprisonmentPointsView()
-	}
-
-
-	function colorizeHeat(nationId, heatInput) {
-	    let preferredHeat = 0
-	    let currentHeat = heatInput.value
-
-	    if (nationId) {
-		let nation = vanillaNations.get(nationId.toString())
-		if (nation && nation.idealcold) {
-		    preferredHeat = nation.idealcold * -1
-		}
-	    }
-	    
-	    if (currentHeat != preferredHeat) {
-		heatInput.classList.add("value-picker__input--negative")
-	    }
-	    else {
-		heatInput.classList.remove("value-picker__input--negative")
-	    }
-		
 	}
 
 	update()
