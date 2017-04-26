@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+    <title>Bless Calculator</title>
+    <meta name="description" content="Calculate the cheapest Pretender for your bless in Dominions 4."/>
+    <meta name="keywords" content="Dominions 4, bless, calculator, chassis, physical form, magic"/>
+    <!--- JS ------------------>
+    <script src="helpers.js"></script>
+    <script src="vanilla-mod.js"></script>
+    <script src="code.js"></script>
+    <!--- CSS ----------------->
+    <link rel="stylesheet" href="styles-calculator.css">
+  </head>
+  <body>
+
+    <header>
+
+    </header>
+
+    <main>
+
+      <div class="form">
+	<header class="form__header">Nation</header>
+	<div class="form__body">
+	  <select name="select nation" class="nation-picker__select" id="nation-picker__select">
+	    <option value="any" class="nation-picker__option nation-picker__option--any">Any nation</option> 
+	  </select>
+	</div>
+      </div>
+
+      <div class="form">
+	<header class="form__header">Magic</header>
+	<div class="form__body">
+	  <div class="form__section">  
+	    <div class="value-picker value-picker--fire">
+	      <label class="value-picker__label value-picker__label--magic value-picker__label--fire" for="fire-picker__input">F</label>
+	      <input type="number" min="0" max="10" value="0" id="fire-picker__input" class="value-picker__input value-picker__input--magic value-picker__input--fire">
+	    </div>
+	    <div class="value-picker value-picker--air">
+              <label class="value-picker__label value-picker__label--magic value-picker__label--air" for="air-picker__input">A</label>
+	      <input type="number" min="0" max="10" value="0" id="air-picker__input" class="value-picker__input value-picker__input--magic value-picker__input--air">
+	    </div>
+	    <div class="value-picker value-picker--water">
+              <label class="value-picker__label value-picker__label--magic value-picker__label--water" for="water-picker__input">W</label>
+	      <input type="number" min="0" max="10" value="0" id="water-picker__input" class="value-picker__input value-picker__input--magic value-picker__input--water">
+	    </div>
+	    <div class="value-picker value-picker--earth">
+	      <label class="value-picker__label value-picker__label--magic value-picker__label--earth" for="earth-picker__input">E</label>
+	      <input type="number" min="0" max="10" value="0" id="earth-picker__input" class="value-picker__input value-picker__input--magic value-picker__input--earth">
+	    </div>
+	  </div>
+
+	  <div class="form__section">
+	    <div class="value-picker value-picker--astral">
+	      <label class="value-picker__label value-picker__label--magic value-picker__label--astral" for="astral-picker__input">S</label>
+	      <input type="number" min="0" max="10" value="0" id="astral-picker__input" class="value-picker__input value-picker__input--magic value-picker__input--astral">
+	    </div>
+	    <div class="value-picker value-picker--death">
+	      <label class="value-picker__label value-picker__label--magic value-picker__label--death" for="death-picker__input">D</label>
+	      <input type="number" min="0" max="10" value="0" id="death-picker__input" class="value-picker__input value-picker__input--magic value-picker__input--death">
+	    </div>
+	    <div class="value-picker value-picker--nature">
+	      <label class="value-picker__label value-picker__label--magic value-picker__label--nature" for="nature-picker__input">N</label>
+	      <input type="number" min="0" max="10" value="0" id="nature-picker__input" class="value-picker__input value-picker__input--magic value-picker__input--nature">
+	    </div>
+	    <div class="value-picker value-picker--blood">
+	      <label class="value-picker__label value-picker__label--magic value-picker__label--blood" for="blood-picker__input">B</label>
+	      <input type="number" min="0" max="10" value="0" id="blood-picker__input" class="value-picker__input value-picker__input--magic value-picker__input--blood">
+	    </div>
+	  </div>
+	</div>
+	<div class="form__body form__body--bless-effects">
+	  <p id="bless-effects-morale" class="bless-effects bless-effects--visible bless-effects-morale">Morale + 1</p>
+	  <p id="bless-effects-fire" class="bless-effects bless-effects--fire"></p>
+	  <p id="bless-effects-air" class="bless-effects bless-effects--air"></p>
+	  <p id="bless-effects-water" class="bless-effects bless-effects--water"></p>
+	  <p id="bless-effects-earth" class="bless-effects bless-effects--earth"></p>
+	  <p id="bless-effects-astral" class="bless-effects bless-effects--astral"></p>
+	  <p id="bless-effects-death" class="bless-effects bless-effects--death"></p>
+	  <p id="bless-effects-nature" class="bless-effects bless-effects--nature"></p>
+	  <p id="bless-effects-blood" class="bless-effects bless-effects--blood"></p>
+	</div>
+      </div>
+
+      <div class="form">
+	<header class="form__header">Dominion</header>
+	<div class="form__body">
+	  
+	  <div class="form__section">
+	    <div class="value-picker value-picker--dominion">
+	      <label class="value-picker__label value-picker__label--dominion" for="dominion-picker__input">Dom</label>
+	      <input type="number" min="1" max="10" value="1" id="dominion-picker__input" class="value-picker__input value-picker__input--dominion">
+	    </div>
+	  </div>
+
+	  <div class="form__body">
+	    <div class="form__section">
+	      <div class="value-picker value-picker--scale">
+		<label class="value-picker__label value-picker__label--scale value-picker__label--order" for="order-picker__input">Ord</label>
+		<input type="number" min="-3" max="3" value="0" id="order-picker__input" class="value-picker__input value-picker__input--scale value-picker__input--order">
+	      </div>
+	      <div class="value-picker value-picker--scale">
+		<label class="value-picker__label value-picker__label--scale value-picker__label--productivity" for="productivity-picker__input">Prd</label>
+		<input type="number" min="-3" max="3" value="0" id="productivity-picker__input" class="value-picker__input value-picker__input--scale value-picker__input--productivity">
+	      </div>
+	      <div class="value-picker value-picker--scale">
+		<label class="value-picker__label value-picker__label--scale value-picker__label--heat" for="heat-picker__input">Heat</label>
+		<input type="number" min="-3" max="3" value="0" id="heat-picker__input" class="value-picker__input value-picker__input--scale value-picker__input--heat">
+	      </div>
+	    </div>
+	    <div class="form__section">
+	      <div class="value-picker value-picker--scale">
+		<label class="value-picker__label value-picker__label--scale value-picker__label--growth" for="growth-picker__input">Grw</label>
+		<input type="number" min="-3" max="3" value="0" id="growth-picker__input" class="value-picker__input value-picker__input--scale value-picker__input--growth">
+	      </div>
+	      <div class="value-picker value-picker--scale">
+		<label class="value-picker__label value-picker__label--scale value-picker__label--fortune" for="fortune-picker__input">Frt</label>
+		<input type="number" min="-3" max="3" value="0" id="fortune-picker__input" class="value-picker__input value-picker__input--scale value-picker__input--fortune">
+	      </div>
+	      <div class="value-picker value-picker--scale">
+		<label class="value-picker__label value-picker__label--scale value-picker__label--magic" for="magic-picker__input">Mgc</label>
+		<input type="number" min="-3" max="3" value="0" id="magic-picker__input" class="value-picker__input value-picker__input--scale value-picker__input--magic">
+	      </div>
+	    </div>
+	  </div>
+	</div>
+      </div>
+</div>
+
+<div class="form">
+  <header class="form__header">Imprisonment</header>
+  <div class="form__body form__body--imprisonment">
+    <div class="value-picker value-picker--imprisonment value-picker--imprisonment-checked">
+      <input type="radio" checked name="imprisonment" value="0" class="value-picker__input value-picker__input--imprisonment" id="awake-picker__input">
+      <label class="value-picker__label value-picker__label--imprisonment" for="awake-picker__input">Awake (0 points)</label>
+    </div>	    
+    <div class="value-picker value-picker--imprisonment">
+      <input type="radio" name="imprisonment" value="150" class="value-picker__input value-picker__input--imprisonment" id="dormant-picker__input">
+      <label class="value-picker__label value-picker__label--imprisonment" for="dormant-picker__input">Dormant (gain 150 points)</label>
+    </div>	    
+    <div class="value-picker value-picker--imprisonment">
+      <input type="radio" name="imprisonment" value="250" class="value-picker__input value-picker__input--imprisonment" id="imprisoned-picker__input">
+      <label class="value-picker__label value-picker__label--imprisonment" for="imprisoned-picker__input">Imprisoned (gain 250 points)</label>
+    </div>
+  </div>
+</div>
+
+<div class="form">
+
+  <header class="form__header">Pretenders</header>
+
+  <table class="pretenders-table" id="pretenders-table">
+    <thead class="pretenders-table__head" id="pretenders-table__head">
+      <tr class="pretenders-table__row">
+	<th class="pretenders-table__header">Name</th>
+	<th class="pretenders-table__header">Points left</th>
+	<th class="pretenders-table__header">Dominion</th>
+	<th class="pretenders-table__header" colspan="8">Magic</th>
+      </tr>
+    </thead>
+    <tbody class="pretenders-table__body" id="pretenders-table__body">    
+    </tbody>
+  </table>
+  
+</div>
+
+</main>
+
+<section id="debugger">
+  
+</section>
+
+
+<footer>
+
+</footer>
+
+
+</body>
+</html>
