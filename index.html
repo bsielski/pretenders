@@ -12,6 +12,8 @@
     <script src="code.js"></script>
     <!--- CSS ----------------->
     <link rel="stylesheet" href="styles-calculator.css">
+    <link rel="stylesheet" media="(max-width: 360px)" href="mobile.css" />
+
   </head>
   <body>
 
@@ -25,7 +27,7 @@
 	<header class="form__header">Nation</header>
 	<div class="form__body">
 	  <select name="select nation" class="nation-picker__select" id="nation-picker__select">
-	    <option value="any" class="nation-picker__option nation-picker__option--any">Any nation</option> 
+	    <option value="any" class="nation-picker__option nation-picker__option--any">Any nation</option>
 	  </select>
 	</div>
       </div>
@@ -33,41 +35,57 @@
       <div class="form">
 	<header class="form__header">Magic</header>
 	<div class="form__body">
-	  <div class="form__section">  
+	  <div class="form__section">
 	    <div class="value-picker value-picker--fire">
-	      <label class="value-picker__label value-picker__label--magic value-picker__label--fire" for="fire-picker__input">F</label>
-	      <input type="number" min="0" max="10" value="0" id="fire-picker__input" class="value-picker__input value-picker__input--magic value-picker__input--fire">
+        <button class="value-picker__button value-picker__button--magic value-picker__button--fire" >+</button>
+        <label class="value-picker__label value-picker__label--magic value-picker__label--fire" for="fire-picker__input">F</label>
+        <input type="number" min="0" max="10" value="0" id="fire-picker__input" class="value-picker__input value-picker__input--magic value-picker__input--fire">
+        <button class="value-picker__button value-picker__button--magic value-picker__button--fire" >-</button>
 	    </div>
 	    <div class="value-picker value-picker--air">
-              <label class="value-picker__label value-picker__label--magic value-picker__label--air" for="air-picker__input">A</label>
+        <button class="value-picker__button value-picker__button--magic value-picker__button--air" >+</button>
+        <label class="value-picker__label value-picker__label--magic value-picker__label--air" for="air-picker__input">A</label>
 	      <input type="number" min="0" max="10" value="0" id="air-picker__input" class="value-picker__input value-picker__input--magic value-picker__input--air">
+        <button class="value-picker__button value-picker__button--magic value-picker__button--air" >-</button>
 	    </div>
 	    <div class="value-picker value-picker--water">
-              <label class="value-picker__label value-picker__label--magic value-picker__label--water" for="water-picker__input">W</label>
+        <button class="value-picker__button value-picker__button--magic value-picker__button--water" >+</button>
+        <label class="value-picker__label value-picker__label--magic value-picker__label--water" for="water-picker__input">W</label>
 	      <input type="number" min="0" max="10" value="0" id="water-picker__input" class="value-picker__input value-picker__input--magic value-picker__input--water">
+        <button class="value-picker__button value-picker__button--magic value-picker__button--water" >-</button>
 	    </div>
 	    <div class="value-picker value-picker--earth">
+        <button class="value-picker__button value-picker__button--magic value-picker__button--earth" >+</button>
 	      <label class="value-picker__label value-picker__label--magic value-picker__label--earth" for="earth-picker__input">E</label>
 	      <input type="number" min="0" max="10" value="0" id="earth-picker__input" class="value-picker__input value-picker__input--magic value-picker__input--earth">
+        <button class="value-picker__button value-picker__button--magic value-picker__button--earth" >-</button>
 	    </div>
 	  </div>
 
 	  <div class="form__section">
 	    <div class="value-picker value-picker--astral">
+        <button class="value-picker__button value-picker__button--magic value-picker__button--astral" >+</button>
 	      <label class="value-picker__label value-picker__label--magic value-picker__label--astral" for="astral-picker__input">S</label>
 	      <input type="number" min="0" max="10" value="0" id="astral-picker__input" class="value-picker__input value-picker__input--magic value-picker__input--astral">
+        <button class="value-picker__button value-picker__button--magic value-picker__button--astral" >-</button>
 	    </div>
 	    <div class="value-picker value-picker--death">
+        <button class="value-picker__button value-picker__button--magic value-picker__button--death" >+</button>
 	      <label class="value-picker__label value-picker__label--magic value-picker__label--death" for="death-picker__input">D</label>
 	      <input type="number" min="0" max="10" value="0" id="death-picker__input" class="value-picker__input value-picker__input--magic value-picker__input--death">
+        <button class="value-picker__button value-picker__button--magic value-picker__button--death" >-</button>
 	    </div>
 	    <div class="value-picker value-picker--nature">
+        <button class="value-picker__button value-picker__button--magic value-picker__button--nature" >+</button>
 	      <label class="value-picker__label value-picker__label--magic value-picker__label--nature" for="nature-picker__input">N</label>
 	      <input type="number" min="0" max="10" value="0" id="nature-picker__input" class="value-picker__input value-picker__input--magic value-picker__input--nature">
+        <button class="value-picker__button value-picker__button--magic value-picker__button--nature" >-</button>
 	    </div>
 	    <div class="value-picker value-picker--blood">
+        <button class="value-picker__button value-picker__button--magic value-picker__button--blood" >+</button>
 	      <label class="value-picker__label value-picker__label--magic value-picker__label--blood" for="blood-picker__input">B</label>
 	      <input type="number" min="0" max="10" value="0" id="blood-picker__input" class="value-picker__input value-picker__input--magic value-picker__input--blood">
+        <button class="value-picker__button value-picker__button--magic value-picker__button--blood" >-</button>
 	    </div>
 	  </div>
 	</div>
@@ -87,7 +105,7 @@
       <div class="form">
 	<header class="form__header">Dominion</header>
 	<div class="form__body">
-	  
+
 	  <div class="form__section">
 	    <div class="value-picker value-picker--dominion">
 	      <label class="value-picker__label value-picker__label--dominion" for="dominion-picker__input">Dom</label>
@@ -135,11 +153,11 @@
     <div class="value-picker value-picker--imprisonment value-picker--imprisonment-checked">
       <input type="radio" checked name="imprisonment" value="0" class="value-picker__input value-picker__input--imprisonment" id="awake-picker__input">
       <label class="value-picker__label value-picker__label--imprisonment" for="awake-picker__input">Awake (0 points)</label>
-    </div>	    
+    </div>
     <div class="value-picker value-picker--imprisonment">
       <input type="radio" name="imprisonment" value="150" class="value-picker__input value-picker__input--imprisonment" id="dormant-picker__input">
       <label class="value-picker__label value-picker__label--imprisonment" for="dormant-picker__input">Dormant (gain 150 points)</label>
-    </div>	    
+    </div>
     <div class="value-picker value-picker--imprisonment">
       <input type="radio" name="imprisonment" value="250" class="value-picker__input value-picker__input--imprisonment" id="imprisoned-picker__input">
       <label class="value-picker__label value-picker__label--imprisonment" for="imprisoned-picker__input">Imprisoned (gain 250 points)</label>
@@ -160,16 +178,16 @@
 	<th class="pretenders-table__header" colspan="8">Magic</th>
       </tr>
     </thead>
-    <tbody class="pretenders-table__body" id="pretenders-table__body">    
+    <tbody class="pretenders-table__body" id="pretenders-table__body">
     </tbody>
   </table>
-  
+
 </div>
 
 </main>
 
 <section id="debugger">
-  
+
 </section>
 
 
