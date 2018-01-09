@@ -1,229 +1,2024 @@
 const setupVanillaPretenders = () => {
     const vanilla_pretenders_data = {
-	"109": {"name": "Dagon", "pointcost": 270, "pathcost": 60, "startdom": 3, "W": 1, "E": 2, "realm1": 9,   },    
-	"120": {"name": "Moloch", "pointcost": 260, "pathcost": 80, "startdom": 2, "F": 2, "B": 1, "realm1": 5,   },    
-	"138": {"name": "Gorgon", "pointcost": 250, "pathcost": 80, "startdom": 2, "E": 2, "N": 1, "realm1": 3,   },    
-	"156": {"name": "Cyclops", "pointcost": 250, "pathcost": 60, "startdom": 3, "E": 3, "realm1": 3,   },    
-	"157": {"name": "Mother of Monsters", "pointcost": 190, "pathcost": 60, "startdom": 3, "D": 1, "N": 1, "B": 1, "realm1": 3,   },    
-	"158": {"name": "Oracle", "pointcost": 190, "pathcost": 40, "startdom": 4, "W": 1, "S": 2, "realm1": 10,   },    
-	"159": {"name": "Monument", "pointcost": 150, "pathcost": 40, "startdom": 4, "E": 2, "S": 1, "realm1": 7,   },    
-	"179": {"name": "Master Lich", "pointcost": 230, "pathcost": 40, "startdom": 2, "D": 3, "realm1": 10,   },    
-	"180": {"name": "Demilich", "pointcost": 130, "pathcost": 20, "startdom": 3, "D": 3, "realm1": 10,   },    
-	"215": {"name": "Virtue", "pointcost": 240, "pathcost": 80, "startdom": 2, "F": 1, "A": 2,   },    
-	"216": {"name": "Dragon", "pointcost": 220, "pathcost": 80, "startdom": 2, "F": 2, "shapechange": 226, "realm1": 10,   },    
-	"226": {"name": "Arch Mage", "pointcost": undefined, "pathcost": 80, "startdom": 2, "F": 2, "shapechange": 216, "realm1": 10,   },    
-	"244": {"name": "Arch Mage", "pointcost": 80, "startdom": 1, "F": 1, "realm1": 10,   },    
-	"245": {"name": "Master Enchanter", "pointcost": 80, "startdom": 1, "N": 1, "realm1": 10,   },    
-	"246": {"name": "Freak Lord", "pointcost": 90, "startdom": 1, "B": 1, "realm1": 10,   },    
-	"248": {"name": "Arch Mage", "pointcost": 70, "startdom": 1, "W": 1, "realm1": 9,   },    
-	"249": {"name": "Crone", "pointcost": 80, "startdom": 1, "D": 1, "realm1": 10,   },    
-	"250": {"name": "Frost Father", "pointcost": 90, "startdom": 1, "A": 1, "W": 1, "realm1": 10, "realm2": 1,   },    
-	"251": {"name": "Great Sage", "pointcost": 110, "startdom": 1, "S": 1, "realm1": 10,   },    
-	"265": {"name": "Dragon", "pointcost": 220, "pathcost": 80, "startdom": 2, "W": 2, "shapechange": 267, "realm1": 10,   },    
-	"266": {"name": "Dragon", "pointcost": 220, "pathcost": 80, "startdom": 2, "N": 2, "shapechange": 268, "realm1": 10,   },    
-	"267": {"name": "Frost Father", "pointcost": undefined, "pathcost": 80, "startdom": 2, "W": 2, "shapechange": 265, "realm1": 10,   },    
-	"268": {"name": "Master Enchanter", "pointcost": undefined, "pathcost": 80, "startdom": 2, "N": 2, "shapechange": 266, "realm1": 10,   },    
-	"269": {"name": "Wyrm", "pointcost": 120, "pathcost": 80, "startdom": 2, "W": 1, "E": 1, "realm1": 1,   },    
-	"270": {"name": "Arch Druid", "pointcost": 90, "startdom": 1, "N": 1, "realm1": 2,   },    
-	"294": {"name": "Nerid", "pointcost": 150, "pathcost": 60, "startdom": 3, "W": 1, "N": 2, "realm1": 9,   },    
-	"320": {"name": "Saurolich", "pointcost": 230, "pathcost": 40, "startdom": 2, "D": 3,   },    
-	"383": {"name": "Prince of Death", "pointcost": 250, "pathcost": 80, "startdom": 2, "D": 3, "realm1": 3,   },    
-	"384": {"name": "Neter of Crafts", "pointcost": 220, "pathcost": 60, "startdom": 3, "E": 2, "S": 1, "realm1": 7,   },    
-	"385": {"name": "Neteret of Joy", "pointcost": 210, "pathcost": 60, "startdom": 3, "E": 2, "N": 1, "realm1": 7,   },    
-	"386": {"name": "Neter of the Sun", "pointcost": 250, "pathcost": 60, "startdom": 3, "F": 2, "S": 1, "realm1": 7,   },    
-	"387": {"name": "Neteret of Many Names", "pointcost": 240, "pathcost": 20, "startdom": 3, "S": 1, "realm1": 7,   },    
-	"388": {"name": "Neter of Chaos", "pointcost": 220, "pathcost": 60, "startdom": 3, "F": 1, "A": 1, "D": 1, "realm1": 7,   },    
-	"395": {"name": "Lich Queen", "pointcost": 160, "pathcost": 40, "startdom": 2, "D": 3, "realm1": 7,   },    
-	"401": {"name": "Bitch Queen", "pointcost": 130, "startdom": 1, "N": 1, "shapechange": 402, "realm1": 1,   },    
-	"402": {"name": "Crone", "pointcost": undefined, "startdom": 1, "N": 1, "shapechange": 401,   },    
-	"472": {"name": "Statue of Order", "pointcost": 170, "pathcost": 40, "startdom": 4, "E": 1, "S": 2, "realm1": 3,   },    
-	"485": {"name": "Great Enchantress", "pointcost": 90, "startdom": 1, "S": 1, "realm1": 10,   },    
-	"486": {"name": "Great Warlock", "pointcost": 80, "pathcost": 10, "startdom": 1, "B": 1,   },    
-	"499": {"name": "Nataraja", "pointcost": 240, "pathcost": 60, "startdom": 3, "F": 1, "E": 1, "S": 1, "realm1": 8,   },    
-	"500": {"name": "Skratti", "pointcost": 100, "pathcost": 10, "startdom": 1, "B": 1,   },    
-	"501": {"name": "Allfather", "pointcost": 270, "pathcost": 40, "startdom": 3, "A": 1, "S": 1, "D": 1, "realm1": 1,   },    
-	"509": {"name": "Arch Seraph", "pointcost": 90, "pathcost": 10, "startdom": 1, "A": 1,   },    
-	"546": {"name": "Void Lurker", "pointcost": 170, "pathcost": 20, "startdom": 4, "S": 3,   },    
-	"550": {"name": "Master Alchemist", "pointcost": 80, "pathcost": 10, "startdom": 1, "E": 1,   },    
-	"600": {"name": "Titan of War and Wisdom", "pointcost": 260, "pathcost": 60, "startdom": 3, "A": 1, "E": 1, "S": 1, "realm1": 3,   },    
-	"601": {"name": "Devi of Fortunes", "pointcost": undefined, "pathcost": 60, "startdom": 3, "W": 2, "S": 1,   },    
-	"602": {"name": "Titan of Heaven", "pointcost": 230, "pathcost": 60, "startdom": 3, "A": 2, "E": 1, "realm1": 3,   },    
-	"603": {"name": "Teotl of Rain", "pointcost": 240, "pathcost": 60, "startdom": 3, "W": 1, "N": 1, "B": 1, "realm1": 6,   },    
-	"604": {"name": "Teotl of the Night", "pointcost": 270, "pathcost": 60, "startdom": 3, "D": 1, "B": 2, "realm1": 6,   },    
-	"605": {"name": "Son of Niefel", "pointcost": 230, "pathcost": 60, "startdom": 3, "W": 2, "D": 1,   },    
-	"606": {"name": "Great Mother", "pointcost": 220, "pathcost": 60, "startdom": 3, "E": 1, "N": 2, "realm1": 2,   },    
-	"607": {"name": "Baphomet", "pointcost": 180, "pathcost": 40, "startdom": 4, "F": 2, "S": 1, "B": 1,   },    
-	"608": {"name": "Phoenix", "pointcost": 90, "pathcost": 80, "startdom": 2, "F": 1, "A": 1, "realm1": 7,   },    
-	"643": {"name": "Bog Mummy", "pointcost": 180, "pathcost": 40, "startdom": 2, "D": 1, "B": 1,   },    
-	"644": {"name": "Dracolich", "pointcost": 180, "pathcost": 80, "startdom": 2, "D": 2, "shapechange": 645,   },    
-	"645": {"name": "Bog Mummy", "pointcost": undefined, "pathcost": 80, "startdom": 2, "D": 2, "shapechange": 644,   },    
-	"652": {"name": "Void Lord", "pointcost": 220, "pathcost": 60, "startdom": 3, "W": 1, "S": 2,   },    
-	"653": {"name": "Serpent King", "pointcost": 80, "startdom": 1, "N": 1, "shapechange": 654, "realm1": 7,   },    
-	"654": {"name": "Serpent King", "pointcost": undefined, "startdom": 1, "N": 1, "shapechange": 653, "realm1": 7,   },    
-	"655": {"name": "Scorpion King", "pointcost": 110, "pathcost": 60, "startdom": 2, "F": 1, "E": 1, "realm1": 5,   },    
-	"656": {"name": "Fountain of Blood", "pointcost": 200, "pathcost": 40, "startdom": 4, "B": 3, "realm1": 10,   },    
-	"657": {"name": "Monolith", "pointcost": 160, "pathcost": 40, "startdom": 4, "E": 1, "S": 1, "N": 1, "realm1": 2, "realm2": 1,   },    
-	"661": {"name": "Shedu", "pointcost": 100, "pathcost": 80, "startdom": 2, "E": 1, "S": 1, "realm1": 5,   },    
-	"779": {"name": "Rams-Headed Serpent", "pointcost": 90, "pathcost": 80, "startdom": 2, "N": 2, "realm1": 2,   },    
-	"812": {"name": "Lord of the Wild", "pointcost": 250, "pathcost": 60, "startdom": 3, "N": 2, "B": 1, "realm1": 3,   },    
-	"857": {"name": "Smoking Mirror", "pointcost": 100, "pathcost": 20, "startdom": 1, "F": 1, "D": 1, "B": 1, "shapechange": 858,   },    
-	"858": {"name": "Jaguar", "pointcost": undefined, "pathcost": 20, "startdom": 1, "F": 1, "D": 1, "B": 1, "shapechange": 857,   },    
-	"862": {"name": "Vampire Queen", "pointcost": 250, "pathcost": 40, "startdom": 1, "D": 1, "B": 2,   },    
-	"872": {"name": "Ghost King", "pointcost": 200, "pathcost": 20, "startdom": 2, "D": 1, "realm1": 10,   },    
-	"873": {"name": "Great Seer of the Deeps", "pointcost": 90, "startdom": 1, "S": 1,   },    
-	"874": {"name": "Divine Emperor", "pointcost": 100, "startdom": 2, "S": 1,   },    
-	"905": {"name": "Jade Emperor", "pointcost": 200, "pathcost": 60, "startdom": 3, "A": 1, "W": 1, "S": 1, "realm1": 4,   },    
-	"956": {"name": "Mother of Tuathas", "pointcost": undefined, "pathcost": 60, "startdom": 3, "A": 2, "N": 1,   },    
-	"957": {"name": "Lord of The Desert Sun", "pointcost": 240, "pathcost": 60, "startdom": 3, "F": 2, "N": 1, "realm1": 5,   },    
-	"958": {"name": "Colossal Head", "pointcost": 160, "pathcost": 40, "startdom": 4, "E": 1, "B": 2, "realm1": 6,   },    
-	"961": {"name": "Titan of the Sea", "pointcost": 230, "pathcost": 60, "startdom": 3, "W": 2, "E": 1, "realm1": 3,   },    
-	"964": {"name": "Lord of Fertility", "pointcost": undefined, "pathcost": 60, "startdom": 3, "E": 1, "N": 2,   },    
-	"973": {"name": "Ancient Kraken", "pointcost": 110, "pathcost": 80, "startdom": 2, "E": 1, "S": 1, "realm1": 9,   },    
-	"978": {"name": "Great Black Bull", "pointcost": 90, "pathcost": 80, "startdom": 2, "N": 1, "B": 1, "realm1": 3,   },    
-	"979": {"name": "Great White Bull", "pointcost": 90, "pathcost": 80, "startdom": 2, "E": 1, "N": 1, "realm1": 3,   },    
-	"1025": {"name": "Divine Glyph", "pointcost": 140, "pathcost": 40, "startdom": 4, "F": 1, "S": 2,   },    
-	"1026": {"name": "Carrion Dragon", "pointcost": 150, "pathcost": 80, "startdom": 2, "D": 1, "N": 1, "shapechange": 1027,   },    
-	"1027": {"name": "Carrion Lord", "pointcost": undefined, "pathcost": 80, "startdom": 2, "D": 1, "N": 1, "shapechange": 1026,   },    
-	"1096": {"name": "Destroyer of Worlds", "pointcost": 230, "pathcost": 60, "startdom": 3, "A": 2, "D": 1, "realm1": 8,   },    
-	"1097": {"name": "Lord of The Summer Plague", "pointcost": 230, "pathcost": 60, "startdom": 3, "F": 1, "D": 2, "realm1": 5,   },    
-	"1098": {"name": "Asynja", "pointcost": 250, "pathcost": 60, "startdom": 3, "A": 2, "E": 1, "realm1": 1,   },    
-	"1229": {"name": "Son of Fenrer", "pointcost": 90, "pathcost": 80, "startdom": 2, "W": 1, "N": 1, "realm1": 1,   },    
-	"1230": {"name": "Forge Lord", "pointcost": 240, "pathcost": 60, "startdom": 3, "F": 1, "E": 2, "realm1": 3,   },    
-	"1231": {"name": "Drakaina", "pointcost": 240, "pathcost": 60, "startdom": 3, "W": 1, "D": 1, "N": 1, "realm1": 9,   },    
-	"1232": {"name": "Old Man of the Sea", "pointcost": 260, "pathcost": 30, "startdom": 3, "W": 2, "S": 1, "realm1": 9,   },    
-	"1233": {"name": "Lord of the Waves", "pointcost": 220, "pathcost": 60, "startdom": 3, "A": 1, "W": 1, "N": 1, "realm1": 9,   },    
-	"1339": {"name": "Nyorai", "pointcost": 200, "pathcost": 60, "startdom": 3, "E": 2, "S": 1, "realm1": 4,   },    
-	"1340": {"name": "Tiwaz of War", "pointcost": 230, "pathcost": 60, "startdom": 3, "F": 1, "A": 1, "E": 1,   },    
-	"1341": {"name": "Devi of Darkness", "pointcost": 250, "pathcost": 60, "startdom": 3, "E": 1, "B": 2, "realm1": 8,   },    
-	"1342": {"name": "Titan of Rivers", "pointcost": 240, "pathcost": 60, "startdom": 3, "W": 2, "S": 1, "realm1": 3,   },    
-	"1343": {"name": "Titan of Love", "pointcost": 250, "pathcost": 60, "startdom": 3, "W": 1, "N": 2, "realm1": 3,   },    
-	"1344": {"name": "Devi of Good Fortunes", "pointcost": 240, "pathcost": 60, "startdom": 3, "W": 1, "S": 2, "realm1": 8,   },    
-	"1345": {"name": "Celestial General", "pointcost": 230, "pathcost": 60, "startdom": 3, "A": 1, "E": 1, "S": 1, "realm1": 4,   },    
-	"1346": {"name": "Colossal Fetish", "pointcost": 240, "pathcost": 40, "startdom": 4, "E": 2, "N": 1,   },    
-	"1348": {"name": "Titan of Serpents and Medicine", "pointcost": 250, "pathcost": 60, "startdom": 3, "D": 1, "N": 2, "realm1": 3,   },    
-	"1349": {"name": "Devourer of Souls", "pointcost": 70, "pathcost": 80, "startdom": 2, "E": 1, "D": 1,   },    
-	"1370": {"name": "Volla of the Bountiful Forest", "pointcost": 200, "pathcost": 60, "startdom": 3, "W": 2, "N": 1,   },    
-	"1371": {"name": "Titan of Death and Rebirth", "pointcost": 220, "pathcost": 60, "startdom": 3, "E": 1, "D": 1, "N": 1, "realm1": 3,   },    
-	"1372": {"name": "Annunaki of the Sky", "pointcost": 270, "pathcost": 60, "startdom": 3, "A": 3, "realm1": 5,   },    
-	"1373": {"name": "Annunaki of Sweet Waters", "pointcost": 240, "pathcost": 60, "startdom": 3, "W": 2, "E": 1, "realm1": 5,   },    
-	"1374": {"name": "Annunaki of the Morning Star", "pointcost": 230, "pathcost": 60, "startdom": 3, "A": 1, "E": 1, "S": 1, "realm1": 5,   },    
-	"1378": {"name": "Lord of the Forest", "pointcost": 200, "pathcost": 60, "startdom": 3, "E": 1, "N": 2, "realm1": 2,   },    
-	"1379": {"name": "Keeper of the Bridge", "pointcost": 200, "pathcost": 60, "startdom": 3, "A": 1, "E": 1, "N": 1, "realm1": 1,   },    
-	"1384": {"name": "Solar Disc", "pointcost": 230, "pathcost": 60, "startdom": 3, "F": 3, "realm1": 5,   },    
-	"1402": {"name": "Polypal Queen", "pointcost": 180, "pathcost": 20, "startdom": 4, "W": 1, "S": 2,   },    
-	"1428": {"name": "Bakemono Kunshu", "pointcost": 110, "pathcost": 40, "startdom": 1, "F": 1, "D": 1,   },    
-	"1561": {"name": "Father of Winters", "pointcost": 220, "pathcost": 60, "startdom": 3, "A": 1, "W": 2, "realm1": 1,   },    
-	"1581": {"name": "Risen Oracle", "pointcost": 180, "pathcost": 60, "startdom": 2, "E": 1, "D": 1,   },    
-	"1590": {"name": "Ageless Olm", "pointcost": 90, "pathcost": 60, "startdom": 2, "W": 1, "E": 1,   },    
-	"1896": {"name": "Lawgiver", "pointcost": 90, "pathcost": 40, "startdom": 1, "A": 1, "S": 1, "N": 1, "shapechange": 1897,   },    
-	"1897": {"name": "Feathered Serpent", "pointcost": undefined, "pathcost": 40, "startdom": 1, "A": 1, "S": 1, "N": 1, "shapechange": 1896,   },    
-	"1898": {"name": "Fomorian Sorcerer", "pointcost": 90, "pathcost": 20, "startdom": 1, "A": 1, "D": 1,   },    
-	"1899": {"name": "Fomorian God King", "pointcost": 260, "pathcost": 60, "startdom": 3, "W": 1, "D": 2,   },    
-	"1905": {"name": "Great Sorceress", "pointcost": 100, "pathcost": 10, "startdom": 1, "A": 1, "D": 1,   },    
-	"2082": {"name": "Son of the Fallen", "pointcost": 240, "pathcost": 60, "startdom": 3, "B": 3,   },    
-	"2137": {"name": "Urmahullu", "pointcost": 120, "pathcost": 60, "startdom": 2, "A": 1, "S": 1, "realm1": 5,   },    
-	"2138": {"name": "Sphinx", "pointcost": 120, "pathcost": 60, "startdom": 2, "S": 1, "D": 1, "realm1": 5,   },    
-	"2202": {"name": "Great Siddha", "pointcost": 200, "pathcost": 80, "startdom": 2, "A": 1, "S": 2, "realm1": 8,   },    
-	"2203": {"name": "Oni Kunshu", "pointcost": 220, "pathcost": 60, "startdom": 3, "F": 1, "E": 1, "D": 1,   },    
-	"2205": {"name": "Great Sauromancer", "pointcost": 90, "startdom": 1, "D": 2,   },    
-	"2206": {"name": "Eldest Dwarf", "pointcost": 80, "pathcost": 20, "startdom": 1, "E": 1, "realm1": 1,   },    
-	"2207": {"name": "Great Sorcerer", "pointcost": 80, "pathcost": 10, "startdom": 1, "D": 1,   },    
-	"2234": {"name": "Irminsul", "pointcost": 180, "pathcost": 60, "startdom": 4, "N": 3, "realm1": 1,   },    
-	"2239": {"name": "Asynja", "pointcost": 230, "pathcost": 60, "startdom": 3, "A": 1, "N": 2, "realm1": 1,   },    
-	"2315": {"name": "Melqart", "pointcost": 210, "pathcost": 60, "startdom": 2, "B": 3,   },    
-	"2316": {"name": "Dragon King", "pointcost": 200, "pathcost": 60, "startdom": 2, "W": 2, "shapechange": 2317, "realm1": 4,   },    
-	"2317": {"name": "Celestial Bureaucrat", "pointcost": undefined, "pathcost": 60, "startdom": 2, "W": 2, "shapechange": 2316,   },    
-	"2318": {"name": "Celestial Dragon", "pointcost": 200, "pathcost": 60, "startdom": 2, "A": 1, "S": 1, "shapechange": 2319, "realm1": 4,   },    
-	"2319": {"name": "Celestial Bureaucrat", "pointcost": undefined, "pathcost": 60, "startdom": 2, "A": 1, "S": 1, "shapechange": 2318,   },    
-	"2426": {"name": "Bouda Father", "pointcost": 110, "pathcost": 20, "startdom": 1, "F": 1, "E": 1, "D": 1, "shapechange": 2427,   },    
-	"2427": {"name": "Werehyena", "pointcost": undefined, "pathcost": 20, "startdom": 1, "F": 1, "E": 1, "D": 1, "shapechange": 2426,   },    
-	"2431": {"name": "Titan of the Underworld", "pointcost": 230, "pathcost": 60, "startdom": 3, "E": 1, "D": 2, "realm1": 3,   },    
-	"2434": {"name": "Teteo Inan", "pointcost": 250, "pathcost": 60, "startdom": 3, "E": 1, "N": 1, "B": 1, "realm1": 6,   },    
-	"2435": {"name": "Annunaki of Love and War", "pointcost": 250, "pathcost": 60, "startdom": 3, "A": 1, "E": 1, "N": 1, "realm1": 5,   },    
-	"2436": {"name": "Annunaki of the Moon", "pointcost": 260, "pathcost": 60, "startdom": 3, "A": 1, "S": 2, "realm1": 5,   },    
-	"2437": {"name": "Annunaki of Growth and Rebirth", "pointcost": 240, "pathcost": 60, "startdom": 3, "E": 1, "N": 2, "realm1": 5,   },    
-	"2438": {"name": "Annunaki of the Underworld", "pointcost": 260, "pathcost": 60, "startdom": 3, "D": 3, "realm1": 5,   },    
-	"2440": {"name": "Sea Dragon", "pointcost": 140, "pathcost": 80, "startdom": 2, "W": 2, "shapechange": 2441, "realm1": 9,   },    
-	"2441": {"name": "Great Seer of the Deeps", "pointcost": undefined, "pathcost": 80, "startdom": 2, "W": 2, "shapechange": 2440,   },    
-	"2442": {"name": "Teotl of War", "pointcost": 240, "pathcost": 60, "startdom": 3, "F": 1, "N": 1, "B": 1, "realm1": 6,   },    
-	"2443": {"name": "Teotl of the Sky", "pointcost": 230, "pathcost": 60, "startdom": 3, "F": 1, "A": 1, "N": 1, "realm1": 6,   },    
-	"2444": {"name": "Teotl of the Underworld", "pointcost": 250, "pathcost": 60, "startdom": 3, "S": 1, "D": 2, "realm1": 6,   },    
-	"2445": {"name": "Neter of the Underworld", "pointcost": 250, "pathcost": 60, "startdom": 3, "D": 3, "realm1": 7,   },    
-	"2446": {"name": "Neter of Kings", "pointcost": 230, "pathcost": 60, "startdom": 3, "F": 1, "W": 1, "S": 1, "realm1": 7,   },    
-	"2447": {"name": "Idol of Men", "pointcost": 160, "pathcost": 40, "startdom": 4, "F": 1, "A": 1, "N": 1, "realm1": 1,   },    
-	"2448": {"name": "Idol of Beasts", "pointcost": 160, "pathcost": 40, "startdom": 4, "A": 1, "N": 2, "realm1": 1,   },    
-	"2449": {"name": "Idol of Sorcery", "pointcost": 160, "pathcost": 40, "startdom": 4, "S": 2, "D": 1, "realm1": 1,   },    
-	"2450": {"name": "Horned One", "pointcost": 250, "pathcost": 60, "startdom": 3, "N": 3, "realm1": 2,   },    
-	"2457": {"name": "Bodhisattva of Mercy", "pointcost": 260, "pathcost": 80, "startdom": 2, "A": 2, "S": 1, "realm1": 4,   },    
-	"2460": {"name": "Statue of Fertility", "pointcost": 170, "pathcost": 40, "startdom": 4, "E": 1, "N": 2, "realm1": 3,   },    
-	"2461": {"name": "Statue of the Bloody Mother", "pointcost": 160, "pathcost": 40, "startdom": 4, "N": 1, "B": 2, "realm1": 6,   },    
-	"2462": {"name": "Golden Idol", "pointcost": 160, "pathcost": 40, "startdom": 4, "E": 2, "B": 1, "realm1": 5,   },    
-	"2463": {"name": "Statue of War", "pointcost": 170, "pathcost": 40, "startdom": 4, "F": 2, "E": 1, "realm1": 3,   },    
-	"2464": {"name": "Neter of the Moon", "pointcost": 270, "pathcost": 60, "startdom": 3, "S": 3, "realm1": 7,   },    
-	"2465": {"name": "Statue of War", "pointcost": 170, "pathcost": 40, "startdom": 4, "F": 2, "E": 1, "realm1": 4,   },    
-	"2466": {"name": "Kamadhenu", "pointcost": 110, "pathcost": 80, "startdom": 2, "S": 1, "N": 1, "realm1": 8,   },    
-	"2502": {"name": "Earth made Flesh", "pointcost": 270, "pathcost": 60, "startdom": 3, "W": 1, "E": 3,   },    
-	"2503": {"name": "Golden Pillar", "pointcost": 200, "pathcost": 40, "startdom": 4, "E": 3,   },    
-	"2549": {"name": "Maharishi", "pointcost": 80, "startdom": 1, "S": 1, "realm1": 8,   },    
-	"2550": {"name": "Raksharani", "pointcost": 160, "pathcost": 40, "startdom": 2, "D": 1, "N": 1, "B": 1, "shapechange": 2551,   },    
-	"2551": {"name": "Manushya Raksharani", "pointcost": undefined, "pathcost": 40, "startdom": 2, "D": 1, "N": 1, "B": 1, "shapechange": 2550,   },    
-	"2552": {"name": "Ahura of Wisdom", "pointcost": 280, "pathcost": 60, "startdom": 3, "S": 3,   },    
-	"2553": {"name": "Ahura of the Oath", "pointcost": 240, "pathcost": 80, "startdom": 2, "F": 2, "S": 1,   },    
-	"2554": {"name": "Ahura of the Waters", "pointcost": 260, "pathcost": 80, "startdom": 2, "W": 2, "S": 1,   },    
-	"2555": {"name": "Spenta Mainyu", "pointcost": 250, "pathcost": 80, "startdom": 2, "A": 1, "S": 2,   },    
-	"2556": {"name": "Celestial Carp", "pointcost": 230, "pathcost": 60, "startdom": 3, "W": 2, "S": 1, "realm1": 4,   },    
-	"2578": {"name": "Yazad King", "pointcost": 240, "pathcost": 40, "startdom": 2, "A": 1, "W": 1, "S": 1,   },    
-	"2608": {"name": "Azi", "pointcost": 220, "pathcost": 80, "startdom": 2, "F": 1, "D": 1, "shapechange": 2609,   },    
-	"2609": {"name": "Great Warlock", "pointcost": undefined, "pathcost": 80, "startdom": 2, "F": 1, "D": 1, "shapechange": 2608,   },    
-	"2610": {"name": "Angra Mainyu", "pointcost": 260, "pathcost": 60, "startdom": 3, "F": 1, "D": 1, "B": 1,   },    
-	"2611": {"name": "Gannag Menog", "pointcost": 240, "pathcost": 80, "startdom": 2, "F": 1, "D": 2,   },    
-	"2627": {"name": "Daeva of Wrath", "pointcost": 200, "pathcost": 80, "startdom": 2, "F": 2, "B": 1,   },    
-	"2685": {"name": "Viracocha", "pointcost": 270, "pathcost": 60, "startdom": 3, "F": 1, "A": 1, "W": 1,   },    
-	"2686": {"name": "Apu Inti", "pointcost": 280, "pathcost": 60, "startdom": 3, "F": 3,   },    
-	"2693": {"name": "Heavenly Condor", "pointcost": 120, "pathcost": 80, "startdom": 2, "A": 2,   },    
-	"2695": {"name": "Sapa Inca", "pointcost": 220, "pathcost": 40, "startdom": 2, "F": 1, "A": 1, "S": 1,   },    
-	"2696": {"name": "Stone Huaca", "pointcost": 140, "pathcost": 40, "startdom": 4, "A": 1, "E": 2,   },    
-	"2698": {"name": "Apu Illapa", "pointcost": 270, "pathcost": 60, "startdom": 3, "A": 3,   },    
-	"2699": {"name": "Ayar", "pointcost": 210, "pathcost": 80, "startdom": 2, "F": 1, "E": 2,   },    
-	"2737": {"name": "Immortal Coya", "pointcost": 160, "pathcost": 30, "startdom": 2, "E": 1, "D": 2,   },    
-	"2755": {"name": "Hun Came", "pointcost": 280, "pathcost": 60, "startdom": 3, "E": 1, "D": 2, "realm1": 6,   },    
-	"2756": {"name": "Bolon-ti-ku", "pointcost": 210, "pathcost": 80, "startdom": 2, "D": 2, "B": 1, "realm1": 6,   },    
-	"2764": {"name": "Hun Balam", "pointcost": 90, "pathcost": 80, "startdom": 2, "F": 1, "B": 1, "realm1": 6,   },    
-	"2777": {"name": "Demon Macaw", "pointcost": 110, "pathcost": 80, "startdom": 2, "F": 1, "S": 1, "realm1": 6,   },    
-	"2783": {"name": "Drakon", "pointcost": 150, "pathcost": 80, "startdom": 2, "E": 1, "N": 1, "realm1": 3,   },    
-	"2784": {"name": "Thrice Horned Boar", "pointcost": 80, "pathcost": 80, "startdom": 2, "E": 1, "N": 1, "realm1": 2,   },    
-	"2785": {"name": "Solar Eagle", "pointcost": 150, "pathcost": 80, "startdom": 2, "F": 1, "A": 1, "realm1": 10,   },    
-	"2786": {"name": "Celestial Gryphon", "pointcost": 110, "pathcost": 80, "startdom": 2, "A": 2, "realm1": 5,   },    
-	"2787": {"name": "Celestial Lion", "pointcost": 90, "pathcost": 80, "startdom": 2, "F": 1, "S": 1, "realm1": 5,   },    
-	"2788": {"name": "Man-Eater", "pointcost": 100, "pathcost": 80, "startdom": 2, "E": 1, "B": 1, "realm1": 5,   },    
-	"2789": {"name": "Raven of the Underworld", "pointcost": 100, "pathcost": 80, "startdom": 2, "D": 2, "realm1": 10,   },    
-	"2790": {"name": "Myrmecoleon", "pointcost": 60, "pathcost": 80, "startdom": 2, "F": 1, "E": 1, "realm1": 7,   },    
-	"2791": {"name": "Earth Serpent", "pointcost": 130, "pathcost": 80, "startdom": 2, "E": 2, "realm1": 10,   },    
-	"2792": {"name": "Solar Serpent", "pointcost": 100, "pathcost": 80, "startdom": 2, "F": 2, "realm1": 7,   },    
-	"2793": {"name": "Serpent of Chaos", "pointcost": 110, "pathcost": 80, "startdom": 2, "D": 2, "realm1": 7,   },    
-	"2795": {"name": "Dog of the Underworld", "pointcost": 70, "pathcost": 80, "startdom": 2, "W": 1, "D": 1, "realm1": 2,   },    
-	"2796": {"name": "Hound of Hades", "pointcost": 80, "pathcost": 80, "startdom": 2, "E": 1, "D": 1, "realm1": 3,   },    
-	"2797": {"name": "Hieracosphinx", "pointcost": 110, "pathcost": 80, "startdom": 2, "F": 1, "A": 1, "realm1": 7,   },    
-	"2798": {"name": "Criosphinx", "pointcost": 70, "pathcost": 80, "startdom": 2, "A": 1, "N": 1, "realm1": 7,   },    
-	"2799": {"name": "Wadjet", "pointcost": 90, "pathcost": 80, "startdom": 2, "W": 1, "N": 1, "realm1": 7,   },    
-	"2800": {"name": "Ormr", "pointcost": 80, "pathcost": 80, "startdom": 2, "W": 1, "E": 1, "realm1": 1,   },    
-	"2801": {"name": "Linnormr", "pointcost": 120, "pathcost": 80, "startdom": 2, "W": 1, "D": 1, "realm1": 1,   },    
-	"2802": {"name": "Svartalf Mastersmith", "pointcost": 200, "pathcost": 20, "startdom": 1, "E": 1, "D": 1, "shapechange": 2803, "realm1": 1,   },    
-	"2803": {"name": "Linnormr", "pointcost": undefined, "pathcost": 20, "startdom": 1, "E": 1, "D": 1, "shapechange": 2802, "realm1": 1,   },    
-	"2847": {"name": "Protogenos of the Sea", "pointcost": 210, "pathcost": 80, "startdom": 4, "W": 3, "realm1": 9,   },    
-	"2848": {"name": "Father of the Sea", "pointcost": 190, "pathcost": 80, "startdom": 4, "W": 3, "realm1": 2,   },    
-	"2849": {"name": "Father of Monsters", "pointcost": 230, "pathcost": 60, "startdom": 3, "F": 1, "W": 1, "D": 1, "realm1": 9,   },    
-	"2850": {"name": "Statue of the Underworld", "pointcost": 190, "pathcost": 40, "startdom": 4, "D": 3, "realm1": 3,   },    
-	"2851": {"name": "Titan of Winds and Waves", "pointcost": 250, "pathcost": 60, "startdom": 3, "A": 2, "W": 1, "realm1": 3,   },    
-	"2852": {"name": "King of Frozen Bones", "pointcost": 120, "pathcost": 20, "startdom": 1, "W": 1, "D": 1,   },    
-	"2853": {"name": "Ghost King", "pointcost": 200, "pathcost": 20, "startdom": 2, "D": 1,   },    
-	"2855": {"name": "Floating Mind", "pointcost": 30, "pathcost": 80, "startdom": 2, "W": 1, "S": 1, "realm1": 9,   },    
-	"2856": {"name": "Son of the Sea", "pointcost": 270, "pathcost": 60, "startdom": 3, "A": 1, "W": 1, "D": 1, "realm1": 2,   },    
-	"2881": {"name": "Telkhine God-King", "pointcost": 310, "pathcost": 40, "startdom": 2, "A": 1, "W": 1, "E": 1, "shapechange": 2882,   },    
-	"2882": {"name": "Telkhine God-King", "pointcost": undefined, "pathcost": 40, "startdom": 2, "A": 1, "W": 1, "E": 1, "shapechange": 2881,   },    
-	"2922": {"name": "Morgen High Queen", "pointcost": 110, "pathcost": 10, "startdom": 1, "A": 1, "W": 1,   },    
-	"2930": {"name": "Hooded Spirit", "pointcost": 150, "pathcost": 80, "startdom": 2, "W": 1, "E": 1, "N": 1, "realm1": 2,   }
+    "1025": {
+        "S": "2",
+        "name": "Divine Glyph",
+        "pathcost": "40",
+        "pointcost": 120,
+        "startdom": "4"
+    },
+    "1026": {
+        "N": "1",
+        "name": "Carrion Dragon",
+        "pathcost": "80",
+        "pointcost": 150,
+        "shapechange": "1027",
+        "startdom": "2"
+    },
+    "1027": {
+        "N": "1",
+        "name": "Carrion Lord",
+        "pathcost": "80",
+        "pointcost": null,
+        "shapechange": "1026",
+        "startdom": "2"
+    },
+    "109": {
+        "E": "2",
+        "W": "1",
+        "name": "Dagon",
+        "pathcost": "60",
+        "pointcost": 290,
+        "realm1": "9",
+        "startdom": "3"
+    },
+    "1096": {
+        "A": "2",
+        "name": "Destroyer of Worlds",
+        "pathcost": "60",
+        "pointcost": 240,
+        "realm1": "8",
+        "startdom": "3"
+    },
+    "1097": {
+        "name": "Lord of The Summer Plague",
+        "pathcost": "60",
+        "pointcost": 240,
+        "realm1": "5",
+        "startdom": "3"
+    },
+    "1098": {
+        "A": "2",
+        "E": "1",
+        "name": "Asynja",
+        "pathcost": "60",
+        "pointcost": 250,
+        "realm1": "1",
+        "startdom": "3"
+    },
+    "120": {
+        "B": "1",
+        "name": "Moloch",
+        "pathcost": "80",
+        "pointcost": 280,
+        "realm1": "5",
+        "startdom": "2"
+    },
+    "1229": {
+        "N": "1",
+        "W": "1",
+        "name": "Son of Fenrer",
+        "pathcost": "80",
+        "pointcost": 150,
+        "realm1": "1",
+        "startdom": "2"
+    },
+    "1230": {
+        "E": "2",
+        "name": "Forge Lord",
+        "pathcost": "60",
+        "pointcost": 240,
+        "realm1": "3",
+        "startdom": "3"
+    },
+    "1231": {
+        "N": "1",
+        "W": "1",
+        "name": "Drakaina",
+        "pathcost": "60",
+        "pointcost": 260,
+        "realm1": "9",
+        "startdom": "3"
+    },
+    "1232": {
+        "S": "1",
+        "W": "2",
+        "name": "Old Man of the Sea",
+        "pathcost": "30",
+        "pointcost": 270,
+        "realm1": "9",
+        "startdom": "3"
+    },
+    "1233": {
+        "A": "1",
+        "N": "1",
+        "W": "1",
+        "name": "Lord of the Waves",
+        "pathcost": "60",
+        "pointcost": 240,
+        "realm1": "9",
+        "startdom": "3"
+    },
+    "1339": {
+        "E": "2",
+        "S": "1",
+        "name": "Nyorai",
+        "pathcost": "60",
+        "pointcost": 220,
+        "realm1": "4",
+        "startdom": "3"
+    },
+    "1340": {
+        "A": "1",
+        "E": "1",
+        "name": "Tiwaz of War",
+        "pathcost": "60",
+        "pointcost": 240,
+        "startdom": "3"
+    },
+    "1341": {
+        "B": "2",
+        "E": "1",
+        "name": "Devi of Darkness",
+        "pathcost": "60",
+        "pointcost": 260,
+        "realm1": "8",
+        "startdom": "3"
+    },
+    "1342": {
+        "S": "1",
+        "W": "2",
+        "name": "Titan of Rivers",
+        "pathcost": "60",
+        "pointcost": 250,
+        "realm1": "3",
+        "startdom": "3"
+    },
+    "1343": {
+        "N": "2",
+        "W": "1",
+        "name": "Titan of Love",
+        "pathcost": "60",
+        "pointcost": 260,
+        "realm1": "3",
+        "startdom": "3"
+    },
+    "1344": {
+        "S": "2",
+        "W": "1",
+        "name": "Devi of Good Fortunes",
+        "pathcost": "60",
+        "pointcost": 240,
+        "realm1": "8",
+        "startdom": "3"
+    },
+    "1345": {
+        "A": "1",
+        "E": "1",
+        "S": "1",
+        "name": "Celestial General",
+        "pathcost": "60",
+        "pointcost": 250,
+        "realm1": "4",
+        "startdom": "3"
+    },
+    "1346": {
+        "E": "2",
+        "N": "1",
+        "name": "Colossal Fetish",
+        "pathcost": "40",
+        "pointcost": 270,
+        "startdom": "4"
+    },
+    "1348": {
+        "N": "2",
+        "name": "Titan of Serpents and Medicine",
+        "pathcost": "60",
+        "pointcost": 260,
+        "realm1": "3",
+        "startdom": "3"
+    },
+    "1349": {
+        "E": "1",
+        "name": "Devourer of Souls",
+        "pathcost": "80",
+        "pointcost": 140,
+        "startdom": "2"
+    },
+    "1370": {
+        "N": "1",
+        "W": "2",
+        "name": "Volla of the Bountiful Forest",
+        "pathcost": "60",
+        "pointcost": 210,
+        "startdom": "3"
+    },
+    "1371": {
+        "E": "1",
+        "N": "1",
+        "name": "Titan of Death and Rebirth",
+        "pathcost": "60",
+        "pointcost": 230,
+        "realm1": "3",
+        "startdom": "3"
+    },
+    "1372": {
+        "A": "3",
+        "name": "Annunaki of the Sky",
+        "pathcost": "60",
+        "pointcost": 280,
+        "realm1": "5",
+        "startdom": "3"
+    },
+    "1373": {
+        "E": "1",
+        "W": "2",
+        "name": "Annunaki of Sweet Waters",
+        "pathcost": "60",
+        "pointcost": 250,
+        "realm1": "5",
+        "startdom": "3"
+    },
+    "1374": {
+        "A": "1",
+        "E": "1",
+        "S": "1",
+        "name": "Annunaki of the Morning Star",
+        "pathcost": "60",
+        "pointcost": 240,
+        "realm1": "5",
+        "startdom": "3"
+    },
+    "1378": {
+        "E": "1",
+        "N": "2",
+        "name": "Lord of the Forest",
+        "pathcost": "60",
+        "pointcost": 210,
+        "realm1": "2",
+        "startdom": "3"
+    },
+    "1379": {
+        "A": "1",
+        "E": "1",
+        "N": "1",
+        "name": "Keeper of the Bridge",
+        "pathcost": "60",
+        "pointcost": 220,
+        "realm1": "1",
+        "startdom": "3"
+    },
+    "138": {
+        "E": "2",
+        "N": "1",
+        "name": "Gorgon",
+        "pathcost": "80",
+        "pointcost": 240,
+        "realm1": "3",
+        "startdom": "2"
+    },
+    "1384": {
+        "name": "Solar Disc",
+        "pathcost": "60",
+        "pointcost": 230,
+        "realm1": "5",
+        "startdom": "3"
+    },
+    "1402": {
+        "S": "2",
+        "W": "1",
+        "name": "Polypal Queen",
+        "pathcost": "20",
+        "pointcost": 170,
+        "startdom": "4"
+    },
+    "1428": {
+        "name": "Bakemono Kunshu",
+        "pathcost": "40",
+        "pointcost": 150,
+        "startdom": "1"
+    },
+    "156": {
+        "E": "3",
+        "name": "Cyclops",
+        "pathcost": "60",
+        "pointcost": 280,
+        "realm1": "3",
+        "startdom": "3"
+    },
+    "1561": {
+        "A": "1",
+        "W": "2",
+        "name": "Father of Winters",
+        "pathcost": "60",
+        "pointcost": 240,
+        "realm1": "1",
+        "startdom": "3"
+    },
+    "157": {
+        "B": "1",
+        "N": "1",
+        "name": "Mother of Monsters",
+        "pathcost": "60",
+        "pointcost": 220,
+        "realm1": "3",
+        "startdom": "3"
+    },
+    "158": {
+        "S": "2",
+        "W": "1",
+        "name": "Oracle",
+        "pathcost": "40",
+        "pointcost": 150,
+        "realm1": "10",
+        "startdom": "4"
+    },
+    "1581": {
+        "E": "1",
+        "name": "Risen Oracle",
+        "pathcost": "60",
+        "pointcost": 240,
+        "startdom": "2"
+    },
+    "159": {
+        "E": "2",
+        "S": "1",
+        "name": "Monument",
+        "pathcost": "40",
+        "pointcost": 140,
+        "realm1": "7",
+        "startdom": "4"
+    },
+    "1590": {
+        "E": "1",
+        "W": "1",
+        "name": "Ageless Olm",
+        "pathcost": "60",
+        "pointcost": 130,
+        "startdom": "2"
+    },
+    "179": {
+        "name": "Master Lich",
+        "pathcost": "40",
+        "pointcost": 240,
+        "realm1": "10",
+        "startdom": "2"
+    },
+    "180": {
+        "name": "Demilich",
+        "pathcost": "20",
+        "pointcost": 120,
+        "realm1": "10",
+        "startdom": "3"
+    },
+    "1896": {
+        "A": "1",
+        "N": "1",
+        "S": "1",
+        "name": "Lawgiver",
+        "pathcost": "40",
+        "pointcost": 80,
+        "shapechange": "1897",
+        "startdom": "1"
+    },
+    "1897": {
+        "A": "1",
+        "N": "1",
+        "S": "1",
+        "name": "Feathered Serpent",
+        "pathcost": "40",
+        "pointcost": null,
+        "shapechange": "1896",
+        "startdom": "1"
+    },
+    "1898": {
+        "A": "1",
+        "name": "Fomorian Sorcerer",
+        "pathcost": "20",
+        "pointcost": 110,
+        "startdom": "1"
+    },
+    "1899": {
+        "W": "1",
+        "name": "Fomorian God King",
+        "pathcost": "60",
+        "pointcost": 290,
+        "startdom": "3"
+    },
+    "1905": {
+        "A": "1",
+        "name": "Great Sorceress",
+        "pathcost": "10",
+        "pointcost": 110,
+        "startdom": "1"
+    },
+    "2082": {
+        "B": "3",
+        "name": "Son of the Fallen",
+        "pathcost": "60",
+        "pointcost": 260,
+        "startdom": "3"
+    },
+    "2137": {
+        "A": "1",
+        "S": "1",
+        "name": "Urmahlullu",
+        "pathcost": "60",
+        "pointcost": 180,
+        "realm1": "5",
+        "startdom": "2"
+    },
+    "2138": {
+        "S": "1",
+        "name": "Sphinx",
+        "pathcost": "60",
+        "pointcost": 190,
+        "realm1": "5",
+        "startdom": "2"
+    },
+    "215": {
+        "A": "2",
+        "name": "Virtue",
+        "pathcost": "80",
+        "pointcost": 240,
+        "startdom": "2"
+    },
+    "216": {
+        "name": "Dragon",
+        "pathcost": "80",
+        "pointcost": 240,
+        "realm1": "10",
+        "shapechange": "226",
+        "startdom": "2"
+    },
+    "2202": {
+        "A": "1",
+        "S": "2",
+        "name": "Great Siddha",
+        "pathcost": "80",
+        "pointcost": 160,
+        "realm1": "8",
+        "startdom": "2"
+    },
+    "2203": {
+        "E": "1",
+        "name": "Oni Kunshu",
+        "pathcost": "60",
+        "pointcost": 250,
+        "startdom": "3"
+    },
+    "2205": {
+        "name": "Great Sauromancer",
+        "pointcost": 90,
+        "startdom": "1"
+    },
+    "2206": {
+        "E": "1",
+        "name": "Eldest Dwarf",
+        "pathcost": "20",
+        "pointcost": 80,
+        "realm1": "1",
+        "startdom": "1"
+    },
+    "2207": {
+        "name": "Great Sorcerer",
+        "pathcost": "10",
+        "pointcost": 80,
+        "startdom": "1"
+    },
+    "2234": {
+        "N": "3",
+        "name": "Irminsul",
+        "pathcost": "60",
+        "pointcost": 170,
+        "realm1": "1",
+        "startdom": "4"
+    },
+    "2239": {
+        "A": "1",
+        "N": "2",
+        "name": "Asynja",
+        "pathcost": "60",
+        "pointcost": 240,
+        "realm1": "1",
+        "startdom": "3"
+    },
+    "226": {
+        "name": "Arch Mage",
+        "pathcost": "80",
+        "pointcost": 90,
+        "realm1": "10",
+        "shapechange": "216",
+        "startdom": "2"
+    },
+    "2315": {
+        "B": "3",
+        "name": "Melqart",
+        "pathcost": "60",
+        "pointcost": 230,
+        "startdom": "2"
+    },
+    "2316": {
+        "W": "2",
+        "name": "Dragon King",
+        "pathcost": "60",
+        "pointcost": 200,
+        "realm1": "4",
+        "shapechange": "2317",
+        "startdom": "2"
+    },
+    "2317": {
+        "W": "2",
+        "name": "Celestial Bureaucrat",
+        "pathcost": "60",
+        "pointcost": null,
+        "shapechange": "2316",
+        "startdom": "2"
+    },
+    "2318": {
+        "A": "1",
+        "S": "1",
+        "name": "Celestial Dragon",
+        "pathcost": "60",
+        "pointcost": 200,
+        "realm1": "4",
+        "shapechange": "2319",
+        "startdom": "2"
+    },
+    "2319": {
+        "A": "1",
+        "S": "1",
+        "name": "Celestial Bureaucrat",
+        "pathcost": "60",
+        "pointcost": null,
+        "shapechange": "2318",
+        "startdom": "2"
+    },
+    "2426": {
+        "E": "1",
+        "name": "Bouda Father",
+        "pathcost": "20",
+        "pointcost": 110,
+        "shapechange": "2427",
+        "startdom": "1"
+    },
+    "2427": {
+        "E": "1",
+        "name": "Werehyena",
+        "pathcost": "20",
+        "pointcost": null,
+        "shapechange": "2426",
+        "startdom": "1"
+    },
+    "2431": {
+        "E": "1",
+        "name": "Titan of the Underworld",
+        "pathcost": "60",
+        "pointcost": 240,
+        "realm1": "3",
+        "startdom": "3"
+    },
+    "2434": {
+        "B": "1",
+        "E": "1",
+        "N": "1",
+        "name": "Teteo Inan",
+        "pathcost": "60",
+        "pointcost": 270,
+        "realm1": "6",
+        "startdom": "3"
+    },
+    "2435": {
+        "A": "1",
+        "E": "1",
+        "N": "1",
+        "name": "Annunaki of Love and War",
+        "pathcost": "60",
+        "pointcost": 260,
+        "realm1": "5",
+        "startdom": "3"
+    },
+    "2436": {
+        "A": "1",
+        "S": "2",
+        "name": "Annunaki of the Moon",
+        "pathcost": "60",
+        "pointcost": 270,
+        "realm1": "5",
+        "startdom": "3"
+    },
+    "2437": {
+        "E": "1",
+        "N": "2",
+        "name": "Annunaki of Growth and Rebirth",
+        "pathcost": "60",
+        "pointcost": 240,
+        "realm1": "5",
+        "startdom": "3"
+    },
+    "2438": {
+        "name": "Annunaki of the Underworld",
+        "pathcost": "60",
+        "pointcost": 270,
+        "realm1": "5",
+        "startdom": "3"
+    },
+    "244": {
+        "name": "Arch Mage",
+        "pointcost": 90,
+        "realm1": "10",
+        "startdom": "1"
+    },
+    "2440": {
+        "W": "2",
+        "name": "Sea Dragon",
+        "pathcost": "80",
+        "pointcost": 140,
+        "realm1": "9",
+        "shapechange": "2441",
+        "startdom": "2"
+    },
+    "2441": {
+        "W": "2",
+        "name": "Great Seer of the Deeps",
+        "pathcost": "80",
+        "pointcost": null,
+        "shapechange": "2440",
+        "startdom": "2"
+    },
+    "2442": {
+        "B": "1",
+        "N": "1",
+        "name": "Teotl of War",
+        "pathcost": "60",
+        "pointcost": 250,
+        "realm1": "6",
+        "startdom": "3"
+    },
+    "2443": {
+        "A": "1",
+        "N": "1",
+        "name": "Teotl of the Sky",
+        "pathcost": "60",
+        "pointcost": 240,
+        "realm1": "6",
+        "startdom": "3"
+    },
+    "2444": {
+        "S": "1",
+        "name": "Teotl of the Underworld",
+        "pathcost": "60",
+        "pointcost": 250,
+        "realm1": "6",
+        "startdom": "3"
+    },
+    "2445": {
+        "name": "Neter of the Underworld",
+        "pathcost": "60",
+        "pointcost": 260,
+        "realm1": "7",
+        "startdom": "3"
+    },
+    "2446": {
+        "S": "1",
+        "W": "1",
+        "name": "Neter of Kings",
+        "pathcost": "60",
+        "pointcost": 240,
+        "realm1": "7",
+        "startdom": "3"
+    },
+    "2447": {
+        "A": "1",
+        "N": "1",
+        "name": "Idol of Men",
+        "pathcost": "40",
+        "pointcost": 150,
+        "realm1": "1",
+        "startdom": "4"
+    },
+    "2448": {
+        "A": "1",
+        "N": "2",
+        "name": "Idol of Beasts",
+        "pathcost": "40",
+        "pointcost": 150,
+        "realm1": "1",
+        "startdom": "4"
+    },
+    "2449": {
+        "S": "2",
+        "name": "Idol of Sorcery",
+        "pathcost": "40",
+        "pointcost": 160,
+        "realm1": "1",
+        "startdom": "4"
+    },
+    "245": {
+        "N": "1",
+        "name": "Master Enchanter",
+        "pointcost": 100,
+        "realm1": "10",
+        "startdom": "1"
+    },
+    "2450": {
+        "N": "3",
+        "name": "Horned One",
+        "pathcost": "60",
+        "pointcost": 250,
+        "realm1": "2",
+        "startdom": "3"
+    },
+    "2457": {
+        "A": "2",
+        "S": "1",
+        "name": "Bodhisattva of Mercy",
+        "pathcost": "80",
+        "pointcost": 250,
+        "realm1": "4",
+        "startdom": "2"
+    },
+    "246": {
+        "B": "1",
+        "name": "Freak Lord",
+        "pointcost": 100,
+        "realm1": "10",
+        "startdom": "1"
+    },
+    "2460": {
+        "E": "1",
+        "N": "2",
+        "name": "Statue of Fertility",
+        "pathcost": "40",
+        "pointcost": 150,
+        "realm1": "3",
+        "startdom": "4"
+    },
+    "2461": {
+        "B": "2",
+        "N": "1",
+        "name": "Statue of the Bloody Mother",
+        "pathcost": "40",
+        "pointcost": 160,
+        "realm1": "6",
+        "startdom": "4"
+    },
+    "2462": {
+        "B": "1",
+        "E": "2",
+        "name": "Golden Idol",
+        "pathcost": "40",
+        "pointcost": 120,
+        "realm1": "5",
+        "startdom": "4"
+    },
+    "2463": {
+        "E": "1",
+        "name": "Statue of War",
+        "pathcost": "40",
+        "pointcost": 150,
+        "realm1": "3",
+        "startdom": "4"
+    },
+    "2464": {
+        "S": "3",
+        "name": "Neter of the Moon",
+        "pathcost": "60",
+        "pointcost": 260,
+        "realm1": "7",
+        "startdom": "3"
+    },
+    "2465": {
+        "E": "1",
+        "name": "Statue of War",
+        "pathcost": "40",
+        "pointcost": 150,
+        "realm1": "4",
+        "startdom": "4"
+    },
+    "2466": {
+        "N": "1",
+        "S": "1",
+        "name": "Kamadhenu",
+        "pathcost": "80",
+        "pointcost": 240,
+        "realm1": "8",
+        "startdom": "2"
+    },
+    "248": {
+        "W": "1",
+        "name": "Arch Mage",
+        "pointcost": 90,
+        "realm1": "9",
+        "startdom": "1"
+    },
+    "249": {
+        "name": "Crone",
+        "pointcost": 90,
+        "realm1": "10",
+        "startdom": "1"
+    },
+    "250": {
+        "A": "1",
+        "W": "1",
+        "name": "Frost Father",
+        "pointcost": 100,
+        "realm1": "1",
+        "startdom": "1"
+    },
+    "2502": {
+        "E": "3",
+        "W": "1",
+        "name": "Earth made Flesh",
+        "pathcost": "60",
+        "pointcost": 280,
+        "startdom": "3"
+    },
+    "2503": {
+        "E": "3",
+        "name": "Golden Pillar",
+        "pathcost": "40",
+        "pointcost": 150,
+        "startdom": "4"
+    },
+    "251": {
+        "S": "1",
+        "name": "Great Sage",
+        "pointcost": 100,
+        "realm1": "10",
+        "startdom": "1"
+    },
+    "2549": {
+        "S": "1",
+        "name": "Maharishi",
+        "pointcost": 90,
+        "realm1": "8",
+        "startdom": "1"
+    },
+    "2550": {
+        "B": "1",
+        "N": "1",
+        "name": "Raksharani",
+        "pathcost": "40",
+        "pointcost": 160,
+        "shapechange": "2551",
+        "startdom": "2"
+    },
+    "2551": {
+        "B": "1",
+        "N": "1",
+        "name": "Manushya Raksharani",
+        "pathcost": "40",
+        "pointcost": null,
+        "shapechange": "2550",
+        "startdom": "2"
+    },
+    "2552": {
+        "S": "3",
+        "name": "Ahura of Wisdom",
+        "pathcost": "60",
+        "pointcost": 290,
+        "startdom": "3"
+    },
+    "2553": {
+        "S": "1",
+        "name": "Ahura of the Oath",
+        "pathcost": "80",
+        "pointcost": 260,
+        "startdom": "2"
+    },
+    "2554": {
+        "S": "1",
+        "W": "2",
+        "name": "Ahura of the Waters",
+        "pathcost": "80",
+        "pointcost": 260,
+        "startdom": "2"
+    },
+    "2555": {
+        "A": "1",
+        "S": "2",
+        "name": "Spenta Mainyu",
+        "pathcost": "80",
+        "pointcost": 260,
+        "startdom": "2"
+    },
+    "2556": {
+        "S": "1",
+        "W": "2",
+        "name": "Celestial Carp",
+        "pathcost": "60",
+        "pointcost": 240,
+        "realm1": "4",
+        "startdom": "3"
+    },
+    "2578": {
+        "A": "1",
+        "S": "1",
+        "W": "1",
+        "name": "Yazad King",
+        "pathcost": "40",
+        "pointcost": 210,
+        "startdom": "2"
+    },
+    "2608": {
+        "name": "Azi",
+        "pathcost": "80",
+        "pointcost": 220,
+        "shapechange": "2609",
+        "startdom": "2"
+    },
+    "2609": {
+        "name": "Great Warlock",
+        "pathcost": "80",
+        "pointcost": null,
+        "shapechange": "2608",
+        "startdom": "2"
+    },
+    "2610": {
+        "B": "1",
+        "name": "Angra Mainyu",
+        "pathcost": "60",
+        "pointcost": 280,
+        "startdom": "3"
+    },
+    "2611": {
+        "name": "Gannag Menog",
+        "pathcost": "80",
+        "pointcost": 250,
+        "startdom": "2"
+    },
+    "2627": {
+        "B": "1",
+        "name": "Daeva of Wrath",
+        "pathcost": "80",
+        "pointcost": 240,
+        "startdom": "2"
+    },
+    "265": {
+        "W": "2",
+        "name": "Dragon",
+        "pathcost": "80",
+        "pointcost": 220,
+        "realm1": "10",
+        "shapechange": "267",
+        "startdom": "2"
+    },
+    "266": {
+        "N": "2",
+        "name": "Dragon",
+        "pathcost": "80",
+        "pointcost": 220,
+        "realm1": "10",
+        "shapechange": "268",
+        "startdom": "2"
+    },
+    "267": {
+        "W": "2",
+        "name": "Frost Father",
+        "pathcost": "80",
+        "pointcost": null,
+        "realm1": "10",
+        "shapechange": "265",
+        "startdom": "2"
+    },
+    "268": {
+        "N": "2",
+        "name": "Master Enchanter",
+        "pathcost": "80",
+        "pointcost": 100,
+        "realm1": "10",
+        "shapechange": "266",
+        "startdom": "2"
+    },
+    "2685": {
+        "A": "1",
+        "W": "1",
+        "name": "Viracocha",
+        "pathcost": "60",
+        "pointcost": 290,
+        "startdom": "3"
+    },
+    "2686": {
+        "name": "Apu Inti",
+        "pathcost": "60",
+        "pointcost": 290,
+        "startdom": "3"
+    },
+    "269": {
+        "E": "1",
+        "W": "1",
+        "name": "Wyrm",
+        "pathcost": "80",
+        "pointcost": 299,
+        "realm1": "1",
+        "startdom": "2"
+    },
+    "2693": {
+        "A": "2",
+        "name": "Heavenly Condor",
+        "pathcost": "80",
+        "pointcost": 180,
+        "startdom": "2"
+    },
+    "2695": {
+        "A": "1",
+        "S": "1",
+        "name": "Sapa Inca",
+        "pathcost": "40",
+        "pointcost": 200,
+        "startdom": "2"
+    },
+    "2696": {
+        "A": "1",
+        "E": "2",
+        "name": "Stone Huaca",
+        "pathcost": "40",
+        "pointcost": 120,
+        "startdom": "4"
+    },
+    "2698": {
+        "A": "3",
+        "name": "Apu Illapa",
+        "pathcost": "60",
+        "pointcost": 280,
+        "startdom": "3"
+    },
+    "2699": {
+        "E": "2",
+        "name": "Ayar",
+        "pathcost": "80",
+        "pointcost": 240,
+        "startdom": "2"
+    },
+    "270": {
+        "N": "1",
+        "name": "Arch Druid",
+        "pointcost": 90,
+        "realm1": "2",
+        "startdom": "1"
+    },
+    "2737": {
+        "E": "1",
+        "name": "Immortal Coya",
+        "pathcost": "30",
+        "pointcost": 160,
+        "startdom": "2"
+    },
+    "2755": {
+        "E": "1",
+        "name": "Hun Came",
+        "pathcost": "60",
+        "pointcost": 290,
+        "realm1": "6",
+        "startdom": "3"
+    },
+    "2756": {
+        "B": "1",
+        "name": "Bolon-ti-ku",
+        "pathcost": "80",
+        "pointcost": 230,
+        "realm1": "6",
+        "startdom": "2"
+    },
+    "2764": {
+        "B": "1",
+        "name": "Hun Balam",
+        "pathcost": "80",
+        "pointcost": 170,
+        "realm1": "6",
+        "startdom": "2"
+    },
+    "2777": {
+        "S": "1",
+        "name": "Demon Macaw",
+        "pathcost": "80",
+        "pointcost": 170,
+        "realm1": "6",
+        "startdom": "2"
+    },
+    "2783": {
+        "E": "1",
+        "N": "1",
+        "name": "Drakon",
+        "pathcost": "80",
+        "pointcost": 220,
+        "realm1": "3",
+        "startdom": "2"
+    },
+    "2784": {
+        "E": "1",
+        "N": "1",
+        "name": "Thrice Horned Boar",
+        "pathcost": "80",
+        "pointcost": 150,
+        "realm1": "2",
+        "startdom": "2"
+    },
+    "2785": {
+        "A": "1",
+        "name": "Solar Eagle",
+        "pathcost": "80",
+        "pointcost": 230,
+        "realm1": "10",
+        "startdom": "2"
+    },
+    "2786": {
+        "A": "2",
+        "name": "Celestial Gryphon",
+        "pathcost": "80",
+        "pointcost": 180,
+        "realm1": "5",
+        "startdom": "2"
+    },
+    "2787": {
+        "S": "1",
+        "name": "Celestial Lion",
+        "pathcost": "80",
+        "pointcost": 160,
+        "realm1": "5",
+        "startdom": "2"
+    },
+    "2788": {
+        "B": "1",
+        "E": "1",
+        "name": "Man-Eater",
+        "pathcost": "80",
+        "pointcost": 200,
+        "realm1": "5",
+        "startdom": "2"
+    },
+    "2789": {
+        "name": "Raven of the Underworld",
+        "pathcost": "80",
+        "pointcost": 140,
+        "realm1": "10",
+        "startdom": "2"
+    },
+    "2790": {
+        "E": "1",
+        "name": "Myrmecoleon",
+        "pathcost": "80",
+        "pointcost": 150,
+        "realm1": "7",
+        "startdom": "2"
+    },
+    "2791": {
+        "E": "2",
+        "name": "Earth Serpent",
+        "pathcost": "80",
+        "pointcost": 240,
+        "realm1": "10",
+        "startdom": "2"
+    },
+    "2792": {
+        "name": "Solar Serpent",
+        "pathcost": "80",
+        "pointcost": 180,
+        "realm1": "7",
+        "startdom": "2"
+    },
+    "2793": {
+        "name": "Serpent of Chaos",
+        "pathcost": "80",
+        "pointcost": 230,
+        "realm1": "7",
+        "startdom": "2"
+    },
+    "2795": {
+        "W": "1",
+        "name": "Dog of the Underworld",
+        "pathcost": "80",
+        "pointcost": 120,
+        "realm1": "2",
+        "startdom": "2"
+    },
+    "2796": {
+        "E": "1",
+        "name": "Hound of Hades",
+        "pathcost": "80",
+        "pointcost": 170,
+        "realm1": "3",
+        "startdom": "2"
+    },
+    "2797": {
+        "A": "1",
+        "name": "Hieracosphinx",
+        "pathcost": "80",
+        "pointcost": 190,
+        "realm1": "7",
+        "startdom": "2"
+    },
+    "2798": {
+        "A": "1",
+        "N": "1",
+        "name": "Criosphinx",
+        "pathcost": "80",
+        "pointcost": 120,
+        "realm1": "7",
+        "startdom": "2"
+    },
+    "2799": {
+        "N": "1",
+        "W": "1",
+        "name": "Wadjet",
+        "pathcost": "80",
+        "pointcost": 170,
+        "realm1": "7",
+        "startdom": "2"
+    },
+    "2800": {
+        "E": "1",
+        "W": "1",
+        "name": "Ormr",
+        "pathcost": "80",
+        "pointcost": 180,
+        "realm1": "1",
+        "startdom": "2"
+    },
+    "2801": {
+        "W": "1",
+        "name": "Linnormr",
+        "pathcost": "80",
+        "pointcost": 210,
+        "realm1": "1",
+        "startdom": "2"
+    },
+    "2802": {
+        "E": "1",
+        "name": "Svartalf Mastersmith",
+        "pathcost": "20",
+        "pointcost": 200,
+        "realm1": "1",
+        "shapechange": "2803",
+        "startdom": "1"
+    },
+    "2803": {
+        "E": "1",
+        "name": "Linnormr",
+        "pathcost": "20",
+        "pointcost": null,
+        "realm1": "1",
+        "shapechange": "2802",
+        "startdom": "1"
+    },
+    "2847": {
+        "W": "3",
+        "name": "Protogenos of the Sea",
+        "pathcost": "80",
+        "pointcost": 230,
+        "realm1": "9",
+        "startdom": "4"
+    },
+    "2848": {
+        "W": "3",
+        "name": "Father of the Sea",
+        "pathcost": "80",
+        "pointcost": 220,
+        "realm1": "2",
+        "startdom": "4"
+    },
+    "2849": {
+        "W": "1",
+        "name": "Father of Monsters",
+        "pathcost": "60",
+        "pointcost": 250,
+        "realm1": "9",
+        "startdom": "3"
+    },
+    "2850": {
+        "name": "Statue of the Underworld",
+        "pathcost": "40",
+        "pointcost": 170,
+        "realm1": "3",
+        "startdom": "4"
+    },
+    "2851": {
+        "A": "2",
+        "W": "1",
+        "name": "Titan of Winds and Waves",
+        "pathcost": "60",
+        "pointcost": 260,
+        "realm1": "3",
+        "startdom": "3"
+    },
+    "2852": {
+        "W": "1",
+        "name": "King of Frozen Bones",
+        "pathcost": "20",
+        "pointcost": 140,
+        "startdom": "1"
+    },
+    "2853": {
+        "name": "Ghost King",
+        "pathcost": "20",
+        "pointcost": 240,
+        "startdom": "2"
+    },
+    "2855": {
+        "S": "1",
+        "W": "1",
+        "name": "Floating Mind",
+        "pathcost": "80",
+        "pointcost": 80,
+        "realm1": "9",
+        "startdom": "2"
+    },
+    "2856": {
+        "A": "1",
+        "W": "1",
+        "name": "Son of the Sea",
+        "pathcost": "60",
+        "pointcost": 280,
+        "realm1": "2",
+        "startdom": "3"
+    },
+    "2881": {
+        "A": "1",
+        "E": "1",
+        "W": "1",
+        "name": "Telkhine God-King",
+        "pathcost": "40",
+        "pointcost": 290,
+        "shapechange": "2882",
+        "startdom": "2"
+    },
+    "2882": {
+        "A": "1",
+        "E": "1",
+        "W": "1",
+        "name": "Telkhine God-King",
+        "pathcost": "40",
+        "pointcost": null,
+        "shapechange": "2881",
+        "startdom": "2"
+    },
+    "2922": {
+        "A": "1",
+        "W": "1",
+        "name": "Morgen High Queen",
+        "pathcost": "10",
+        "pointcost": 130,
+        "startdom": "1"
+    },
+    "2930": {
+        "E": "1",
+        "N": "1",
+        "W": "1",
+        "name": "Hooded Spirit",
+        "pathcost": "80",
+        "pointcost": 290,
+        "realm1": "2",
+        "startdom": "2"
+    },
+    "294": {
+        "N": "2",
+        "W": "1",
+        "name": "Nerid",
+        "pathcost": "60",
+        "pointcost": 200,
+        "realm1": "9",
+        "startdom": "3"
+    },
+    "2955": {
+        "E": "1",
+        "name": "Leader of the Closed Council",
+        "pathcost": "10",
+        "pointcost": 140,
+        "startdom": "1"
+    },
+    "2958": {
+        "N": "1",
+        "name": "Golden Lion",
+        "pathcost": "80",
+        "pointcost": 160,
+        "realm1": "7",
+        "startdom": "2"
+    },
+    "2959": {
+        "S": "1",
+        "name": "Chiranjivi",
+        "pointcost": 190,
+        "startdom": "1"
+    },
+    "2960": {
+        "A": "1",
+        "E": "1",
+        "S": "1",
+        "W": "1",
+        "name": "Apkallu",
+        "pathcost": "80",
+        "pointcost": 280,
+        "startdom": "2"
+    },
+    "2961": {
+        "N": "1",
+        "name": "Centauride Enchantress",
+        "pointcost": 120,
+        "startdom": "1"
+    },
+    "2977": {
+        "S": "1",
+        "name": "Centaur Great Sage",
+        "pointcost": 140,
+        "startdom": "1"
+    },
+    "2978": {
+        "name": "Master Sorcerer",
+        "pointcost": 90,
+        "startdom": "1"
+    },
+    "2979": {
+        "S": "1",
+        "name": "Onmyo Hakase",
+        "pointcost": 100,
+        "startdom": "1"
+    },
+    "2980": {
+        "S": "3",
+        "name": "Uttervast",
+        "pathcost": "80",
+        "pointcost": 340,
+        "startdom": "3"
+    },
+    "3053": {
+        "S": "1",
+        "name": "Grand Hierophant",
+        "pointcost": 100,
+        "startdom": "1"
+    },
+    "3054": {
+        "S": "2",
+        "name": "Firstborn of the Star",
+        "pointcost": 130,
+        "startdom": "1"
+    },
+    "3055": {
+        "W": "1",
+        "name": "Grand Hydromancer",
+        "pointcost": 100,
+        "realm1": "9",
+        "startdom": "1"
+    },
+    "3056": {
+        "N": "1",
+        "name": "Aphroi Sage",
+        "pointcost": 140,
+        "startdom": "1"
+    },
+    "3057": {
+        "N": "1",
+        "name": "Aphroi Sage",
+        "pointcost": 140,
+        "startdom": "1"
+    },
+    "3058": {
+        "S": "1",
+        "W": "1",
+        "name": "God-King of the Deep",
+        "pathcost": "20",
+        "pointcost": 130,
+        "startdom": "1"
+    },
+    "3059": {
+        "A": "1",
+        "name": "Magister Supreme",
+        "pointcost": 80,
+        "startdom": "1"
+    },
+    "3060": {
+        "S": "1",
+        "name": "Master",
+        "pointcost": 110,
+        "startdom": "1"
+    },
+    "3072": {
+        "S": "1",
+        "name": "Kami of the Sun",
+        "pathcost": "60",
+        "pointcost": 280,
+        "realm1": "4",
+        "startdom": "3"
+    },
+    "3073": {
+        "S": "2",
+        "name": "Kami of the Moon",
+        "pathcost": "60",
+        "pointcost": 260,
+        "realm1": "4",
+        "startdom": "3"
+    },
+    "3074": {
+        "A": "2",
+        "W": "1",
+        "name": "Kami of Storms",
+        "pathcost": "60",
+        "pointcost": 260,
+        "realm1": "4",
+        "startdom": "3"
+    },
+    "3076": {
+        "A": "1",
+        "S": "1",
+        "name": "Morrigna",
+        "pathcost": "60",
+        "pointcost": 380,
+        "realm1": "2",
+        "startdom": "3"
+    },
+    "3079": {
+        "A": "1",
+        "W": "1",
+        "name": "Duiu of Thunder",
+        "pathcost": "60",
+        "pointcost": 250,
+        "realm1": "2",
+        "startdom": "3"
+    },
+    "3080": {
+        "N": "2",
+        "W": "1",
+        "name": "Duiu of Farming",
+        "pathcost": "60",
+        "pointcost": 240,
+        "realm1": "2",
+        "startdom": "3"
+    },
+    "3081": {
+        "B": "1",
+        "N": "1",
+        "name": "Duiu of War",
+        "pathcost": "60",
+        "pointcost": 250,
+        "realm1": "2",
+        "startdom": "3"
+    },
+    "3082": {
+        "N": "1",
+        "S": "1",
+        "W": "1",
+        "name": "Matrona of the Healing Spring",
+        "pathcost": "60",
+        "pointcost": 240,
+        "realm1": "2",
+        "startdom": "3"
+    },
+    "3086": {
+        "N": "1",
+        "name": "Deives of the Sun",
+        "pathcost": "60",
+        "pointcost": 220,
+        "realm1": "1",
+        "startdom": "3"
+    },
+    "3088": {
+        "name": "Dharmapala of the Underworld",
+        "pathcost": "60",
+        "pointcost": 260,
+        "realm1": "4",
+        "startdom": "3"
+    },
+    "3098": {
+        "S": "1",
+        "W": "1",
+        "name": "First Spawn",
+        "pathcost": "40",
+        "pointcost": 110,
+        "startdom": "2"
+    },
+    "320": {
+        "name": "Saurolich",
+        "pathcost": "40",
+        "pointcost": 240,
+        "startdom": "2"
+    },
+    "383": {
+        "name": "Prince of Death",
+        "pathcost": "80",
+        "pointcost": 270,
+        "realm1": "3",
+        "startdom": "2"
+    },
+    "384": {
+        "E": "2",
+        "S": "1",
+        "name": "Neter of Crafts",
+        "pathcost": "60",
+        "pointcost": 230,
+        "realm1": "7",
+        "startdom": "3"
+    },
+    "385": {
+        "E": "2",
+        "N": "1",
+        "name": "Neteret of Joy",
+        "pathcost": "60",
+        "pointcost": 220,
+        "realm1": "7",
+        "startdom": "3"
+    },
+    "386": {
+        "S": "1",
+        "name": "Neter of the Sun",
+        "pathcost": "60",
+        "pointcost": 260,
+        "realm1": "7",
+        "startdom": "3"
+    },
+    "387": {
+        "S": "1",
+        "name": "Neteret of Many Names",
+        "pathcost": "20",
+        "pointcost": 250,
+        "realm1": "7",
+        "startdom": "3"
+    },
+    "388": {
+        "A": "1",
+        "name": "Neter of Chaos",
+        "pathcost": "60",
+        "pointcost": 230,
+        "realm1": "7",
+        "startdom": "3"
+    },
+    "395": {
+        "name": "Lich Queen",
+        "pathcost": "40",
+        "pointcost": 160,
+        "realm1": "7",
+        "startdom": "2"
+    },
+    "401": {
+        "N": "1",
+        "name": "Bitch Queen",
+        "pointcost": 160,
+        "realm1": "1",
+        "shapechange": "402",
+        "startdom": "1"
+    },
+    "402": {
+        "N": "1",
+        "name": "Crone",
+        "pointcost": null,
+        "shapechange": "401",
+        "startdom": "1"
+    },
+    "472": {
+        "E": "1",
+        "S": "2",
+        "name": "Statue of Order",
+        "pathcost": "40",
+        "pointcost": 150,
+        "realm1": "3",
+        "startdom": "4"
+    },
+    "485": {
+        "S": "1",
+        "name": "Great Enchantress",
+        "pointcost": 90,
+        "realm1": "10",
+        "startdom": "1"
+    },
+    "486": {
+        "B": "1",
+        "name": "Great Warlock",
+        "pathcost": "10",
+        "pointcost": 100,
+        "startdom": "1"
+    },
+    "499": {
+        "E": "1",
+        "S": "1",
+        "name": "Nataraja",
+        "pathcost": "60",
+        "pointcost": 260,
+        "realm1": "8",
+        "startdom": "3"
+    },
+    "500": {
+        "B": "1",
+        "name": "Skratti",
+        "pathcost": "10",
+        "pointcost": 140,
+        "startdom": "1"
+    },
+    "501": {
+        "A": "1",
+        "S": "1",
+        "name": "Allfather",
+        "pathcost": "40",
+        "pointcost": 280,
+        "realm1": "1",
+        "startdom": "3"
+    },
+    "509": {
+        "A": "1",
+        "name": "Arch Seraph",
+        "pathcost": "10",
+        "pointcost": 90,
+        "startdom": "1"
+    },
+    "546": {
+        "S": "3",
+        "name": "Void Lurker",
+        "pathcost": "20",
+        "pointcost": 150,
+        "startdom": "4"
+    },
+    "550": {
+        "E": "1",
+        "name": "Master Alchemist",
+        "pathcost": "10",
+        "pointcost": 90,
+        "startdom": "1"
+    },
+    "600": {
+        "A": "1",
+        "E": "1",
+        "S": "1",
+        "name": "Titan of War and Wisdom",
+        "pathcost": "60",
+        "pointcost": 260,
+        "realm1": "3",
+        "startdom": "3"
+    },
+    "601": {
+        "S": "1",
+        "W": "2",
+        "name": "Devi of Fortunes",
+        "pathcost": "60",
+        "pointcost": 240,
+        "startdom": "3"
+    },
+    "602": {
+        "A": "2",
+        "E": "1",
+        "name": "Titan of Heaven",
+        "pathcost": "60",
+        "pointcost": 240,
+        "realm1": "3",
+        "startdom": "3"
+    },
+    "603": {
+        "B": "1",
+        "N": "1",
+        "W": "1",
+        "name": "Teotl of Rain",
+        "pathcost": "60",
+        "pointcost": 250,
+        "realm1": "6",
+        "startdom": "3"
+    },
+    "604": {
+        "B": "2",
+        "name": "Teotl of the Night",
+        "pathcost": "60",
+        "pointcost": 290,
+        "realm1": "6",
+        "startdom": "3"
+    },
+    "605": {
+        "W": "2",
+        "name": "Son of Niefel",
+        "pathcost": "60",
+        "pointcost": 260,
+        "startdom": "3"
+    },
+    "606": {
+        "E": "1",
+        "N": "2",
+        "name": "Great Mother",
+        "pathcost": "60",
+        "pointcost": 280,
+        "realm1": "2",
+        "startdom": "3"
+    },
+    "607": {
+        "B": "1",
+        "S": "1",
+        "name": "Baphomet",
+        "pathcost": "40",
+        "pointcost": 160,
+        "startdom": "4"
+    },
+    "608": {
+        "A": "1",
+        "name": "Phoenix",
+        "pathcost": "80",
+        "pointcost": 110,
+        "realm1": "7",
+        "startdom": "2"
+    },
+    "643": {
+        "B": "1",
+        "name": "Bog Mummy",
+        "pathcost": "40",
+        "pointcost": 240,
+        "startdom": "2"
+    },
+    "644": {
+        "name": "Dracolich",
+        "pathcost": "80",
+        "pointcost": 180,
+        "shapechange": "645",
+        "startdom": "2"
+    },
+    "645": {
+        "name": "Bog Mummy",
+        "pathcost": "80",
+        "pointcost": null,
+        "shapechange": "644",
+        "startdom": "2"
+    },
+    "652": {
+        "S": "2",
+        "W": "1",
+        "name": "Void Lord",
+        "pathcost": "60",
+        "pointcost": 250,
+        "startdom": "3"
+    },
+    "653": {
+        "N": "1",
+        "name": "Serpent King",
+        "pointcost": 80,
+        "realm1": "7",
+        "shapechange": "654",
+        "startdom": "1"
+    },
+    "654": {
+        "N": "1",
+        "name": "Serpent King",
+        "pointcost": null,
+        "realm1": "7",
+        "shapechange": "653",
+        "startdom": "1"
+    },
+    "655": {
+        "E": "1",
+        "name": "Scorpion King",
+        "pathcost": "60",
+        "pointcost": 160,
+        "realm1": "5",
+        "startdom": "2"
+    },
+    "656": {
+        "B": "3",
+        "name": "Fountain of Blood",
+        "pathcost": "40",
+        "pointcost": 150,
+        "realm1": "10",
+        "startdom": "4"
+    },
+    "657": {
+        "E": "1",
+        "N": "1",
+        "S": "1",
+        "name": "Monolith",
+        "pathcost": "40",
+        "pointcost": 160,
+        "realm1": "2",
+        "realm2": "1",
+        "startdom": "4"
+    },
+    "661": {
+        "E": "1",
+        "S": "1",
+        "name": "Shedu",
+        "pathcost": "80",
+        "pointcost": 200,
+        "realm1": "5",
+        "startdom": "2"
+    },
+    "779": {
+        "N": "2",
+        "name": "Rams-Headed Serpent",
+        "pathcost": "80",
+        "pointcost": 180,
+        "realm1": "2",
+        "startdom": "2"
+    },
+    "812": {
+        "B": "1",
+        "N": "2",
+        "name": "Lord of the Wild",
+        "pathcost": "60",
+        "pointcost": 250,
+        "realm1": "3",
+        "startdom": "3"
+    },
+    "857": {
+        "B": "1",
+        "name": "Smoking Mirror",
+        "pathcost": "20",
+        "pointcost": 90,
+        "shapechange": "858",
+        "startdom": "1"
+    },
+    "858": {
+        "B": "1",
+        "name": "Jaguar",
+        "pathcost": "20",
+        "pointcost": null,
+        "shapechange": "857",
+        "startdom": "1"
+    },
+    "862": {
+        "B": "2",
+        "name": "Vampire Queen",
+        "pathcost": "40",
+        "pointcost": 210,
+        "startdom": "1"
+    },
+    "872": {
+        "name": "Ghost King",
+        "pathcost": "20",
+        "pointcost": 220,
+        "realm1": "10",
+        "startdom": "2"
+    },
+    "873": {
+        "S": "1",
+        "name": "Great Seer of the Deeps",
+        "pointcost": 100,
+        "startdom": "1"
+    },
+    "874": {
+        "S": "1",
+        "name": "Divine Emperor",
+        "pointcost": 110,
+        "startdom": "2"
+    },
+    "905": {
+        "A": "1",
+        "S": "1",
+        "W": "1",
+        "name": "Jade Emperor",
+        "pathcost": "60",
+        "pointcost": 220,
+        "realm1": "4",
+        "startdom": "3"
+    },
+    "956": {
+        "A": "2",
+        "N": "1",
+        "name": "Mother of Tuathas",
+        "pathcost": "60",
+        "pointcost": null,
+        "startdom": "3"
+    },
+    "957": {
+        "N": "1",
+        "name": "Lord of The Desert Sun",
+        "pathcost": "60",
+        "pointcost": 250,
+        "realm1": "5",
+        "startdom": "3"
+    },
+    "958": {
+        "B": "2",
+        "E": "1",
+        "name": "Colossal Head",
+        "pathcost": "40",
+        "pointcost": 170,
+        "realm1": "6",
+        "startdom": "4"
+    },
+    "961": {
+        "E": "1",
+        "W": "2",
+        "name": "Titan of the Sea",
+        "pathcost": "60",
+        "pointcost": 240,
+        "realm1": "3",
+        "startdom": "3"
+    },
+    "964": {
+        "E": "1",
+        "N": "2",
+        "name": "Lord of Fertility",
+        "pathcost": "60",
+        "pointcost": null,
+        "startdom": "3"
+    },
+    "973": {
+        "E": "1",
+        "S": "1",
+        "name": "Ancient Kraken",
+        "pathcost": "80",
+        "pointcost": 200,
+        "realm1": "9",
+        "startdom": "2"
+    },
+    "978": {
+        "B": "1",
+        "N": "1",
+        "name": "Great Black Bull",
+        "pathcost": "80",
+        "pointcost": 190,
+        "realm1": "3",
+        "startdom": "2"
+    },
+    "979": {
+        "E": "1",
+        "N": "1",
+        "name": "Great White Bull",
+        "pathcost": "80",
+        "pointcost": 190,
+        "realm1": "3",
+        "startdom": "2"
     }
+}
     let pretenders = new Map()
     Object.keys(vanilla_pretenders_data).forEach(
 	key => {
