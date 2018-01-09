@@ -1,6 +1,6 @@
 const setupVanillaPretenders = () => {
     const vanilla_pretenders_data = {
-	"109": {"name": "Dagon", "pointcost": 270, "pathcost": 60, "startdom": 3, "W": 1, "E": 2, "realm1": 9,   },    
+	"109": {"name": "Twój Stary", "pointcost": 270, "pathcost": 60, "startdom": 3, "W": 1, "E": 2, "realm1": 9,   },    
 	"120": {"name": "Moloch", "pointcost": 260, "pathcost": 80, "startdom": 2, "F": 2, "B": 1, "realm1": 5,   },    
 	"138": {"name": "Gorgon", "pointcost": 250, "pathcost": 80, "startdom": 2, "E": 2, "N": 1, "realm1": 3,   },    
 	"156": {"name": "Cyclops", "pointcost": 250, "pathcost": 60, "startdom": 3, "E": 3, "realm1": 3,   },    
