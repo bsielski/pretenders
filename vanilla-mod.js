@@ -41,6 +41,8 @@ const setupVanillaPretenders = () => {
         "startdom": "3"
     },
     "1097": {
+        "F": "1",
+        "D": "2",
         "name": "Lord of The Summer Plague",
         "pathcost": "60",
         "pointcost": 240,
@@ -268,6 +270,7 @@ const setupVanillaPretenders = () => {
         "startdom": "2"
     },
     "1384": {
+        "F": 3,
         "name": "Solar Disc",
         "pathcost": "60",
         "pointcost": 230,
@@ -283,6 +286,8 @@ const setupVanillaPretenders = () => {
         "startdom": "4"
     },
     "1428": {
+        "F": 1,
+        "D": 1,
         "name": "Bakemono Kunshu",
         "pathcost": "40",
         "pointcost": 150,
@@ -348,6 +353,7 @@ const setupVanillaPretenders = () => {
         "startdom": "2"
     },
     "179": {
+        "D": 3,
         "name": "Master Lich",
         "pathcost": "40",
         "pointcost": 240,
@@ -355,6 +361,7 @@ const setupVanillaPretenders = () => {
         "startdom": "2"
     },
     "180": {
+        "D": 3,
         "name": "Demilich",
         "pathcost": "20",
         "pointcost": 120,
@@ -434,6 +441,7 @@ const setupVanillaPretenders = () => {
         "startdom": "2"
     },
     "216": {
+        "W": 2,
         "name": "Dragon",
         "pathcost": "80",
         "pointcost": 240,
@@ -458,6 +466,7 @@ const setupVanillaPretenders = () => {
         "startdom": "3"
     },
     "2205": {
+        "D": "2",
         "name": "Great Sauromancer",
         "pointcost": 90,
         "startdom": "1"
@@ -471,6 +480,7 @@ const setupVanillaPretenders = () => {
         "startdom": "1"
     },
     "2207": {
+        "D": 1,
         "name": "Great Sorcerer",
         "pathcost": "10",
         "pointcost": 80,
@@ -494,6 +504,7 @@ const setupVanillaPretenders = () => {
         "startdom": "3"
     },
     "226": {
+        "F": 2,
         "name": "Arch Mage",
         "pathcost": "80",
         "pointcost": 90,
@@ -607,6 +618,7 @@ const setupVanillaPretenders = () => {
         "startdom": "3"
     },
     "2438": {
+        "D": 3,
         "name": "Annunaki of the Underworld",
         "pathcost": "60",
         "pointcost": 270,
@@ -614,6 +626,7 @@ const setupVanillaPretenders = () => {
         "startdom": "3"
     },
     "244": {
+        "F": 1,
         "name": "Arch Mage",
         "pointcost": 90,
         "realm1": "10",
@@ -663,6 +676,7 @@ const setupVanillaPretenders = () => {
         "startdom": "3"
     },
     "2445": {
+        "D": 3,
         "name": "Neter of the Underworld",
         "pathcost": "60",
         "pointcost": 260,
@@ -803,6 +817,7 @@ const setupVanillaPretenders = () => {
         "startdom": "1"
     },
     "249": {
+        "D": "1",
         "name": "Crone",
         "pointcost": 90,
         "realm1": "10",
@@ -911,14 +926,9 @@ const setupVanillaPretenders = () => {
         "pointcost": 210,
         "startdom": "2"
     },
-    "2608": {
-        "name": "Azi",
-        "pathcost": "80",
-        "pointcost": 220,
-        "shapechange": "2609",
-        "startdom": "2"
-    },
     "2609": {
+        "F": "1",
+        "D": "1",
         "name": "Great Warlock",
         "pathcost": "80",
         "pointcost": null,
@@ -933,6 +943,8 @@ const setupVanillaPretenders = () => {
         "startdom": "3"
     },
     "2611": {
+        "F": 1,
+        "D": 2,
         "name": "Gannag Menog",
         "pathcost": "80",
         "pointcost": 250,
@@ -990,6 +1002,7 @@ const setupVanillaPretenders = () => {
         "startdom": "3"
     },
     "2686": {
+        "F": "3",
         "name": "Apu Inti",
         "pathcost": "60",
         "pointcost": 290,
@@ -1139,6 +1152,7 @@ const setupVanillaPretenders = () => {
         "startdom": "2"
     },
     "2789": {
+        "D": "2",
         "name": "Raven of the Underworld",
         "pathcost": "80",
         "pointcost": 140,
@@ -1162,6 +1176,7 @@ const setupVanillaPretenders = () => {
         "startdom": "2"
     },
     "2792": {
+        "F": "2",
         "name": "Solar Serpent",
         "pathcost": "80",
         "pointcost": 180,
@@ -1169,6 +1184,7 @@ const setupVanillaPretenders = () => {
         "startdom": "2"
     },
     "2793": {
+        "D": "2",
         "name": "Serpent of Chaos",
         "pathcost": "80",
         "pointcost": 230,
@@ -1277,6 +1293,7 @@ const setupVanillaPretenders = () => {
         "startdom": "3"
     },
     "2850": {
+        "D": "3",
         "name": "Statue of the Underworld",
         "pathcost": "40",
         "pointcost": 170,
@@ -1300,6 +1317,7 @@ const setupVanillaPretenders = () => {
         "startdom": "1"
     },
     "2853": {
+        "D": "1",
         "name": "Ghost King",
         "pathcost": "20",
         "pointcost": 240,
@@ -1414,6 +1432,7 @@ const setupVanillaPretenders = () => {
         "startdom": "1"
     },
     "2978": {
+        "D": "1",
         "name": "Master Sorcerer",
         "pointcost": 90,
         "startdom": "1"
@@ -1562,6 +1581,8 @@ const setupVanillaPretenders = () => {
         "startdom": "3"
     },
     "3088": {
+        "F": "1",
+        "D": "2",
         "name": "Dharmapala of the Underworld",
         "pathcost": "60",
         "pointcost": 260,
@@ -1577,12 +1598,14 @@ const setupVanillaPretenders = () => {
         "startdom": "2"
     },
     "320": {
+        "D": "3",
         "name": "Saurolich",
         "pathcost": "40",
         "pointcost": 240,
         "startdom": "2"
     },
     "383": {
+        "D": "3",
         "name": "Prince of Death",
         "pathcost": "80",
         "pointcost": 270,
@@ -1632,6 +1655,7 @@ const setupVanillaPretenders = () => {
         "startdom": "3"
     },
     "395": {
+        "D": "3",
         "name": "Lich Queen",
         "pathcost": "40",
         "pointcost": 160,
@@ -1807,17 +1831,11 @@ const setupVanillaPretenders = () => {
         "startdom": "2"
     },
     "644": {
+        "D": "2",
         "name": "Dracolich",
         "pathcost": "80",
         "pointcost": 180,
         "shapechange": "645",
-        "startdom": "2"
-    },
-    "645": {
-        "name": "Bog Mummy",
-        "pathcost": "80",
-        "pointcost": null,
-        "shapechange": "644",
         "startdom": "2"
     },
     "652": {
@@ -1921,6 +1939,7 @@ const setupVanillaPretenders = () => {
         "startdom": "1"
     },
     "872": {
+        "D": "1",
         "name": "Ghost King",
         "pathcost": "20",
         "pointcost": 220,

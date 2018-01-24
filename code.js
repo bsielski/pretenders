@@ -269,8 +269,8 @@
 	}
 
 	const magicCost = (pretender, wantedLevels) => {
-	    let cost = 0
-	    let newPathCost = pretender.pathcost
+	    let cost = 0;
+	    let newPathCost = parseInt(pretender.pathcost);
 	    if (newPathCost == undefined) {
 		newPathCost = 10
 	    }
@@ -316,7 +316,7 @@
 		}
 		const result = {}
 		result.id = id
-		result.domCost = maxDominionCost(pretender.startdom, dominionInput.value)
+		result.domCost = maxDominionCost(parseInt(pretender.startdom), dominionInput.value)
 		result.magicCost = magicCost(
 		    pretender,
 		    new Map(
@@ -327,6 +327,7 @@
 		    )
 		)
 		const whichMatter = (startLevel, wantedLevel) => {
+			startLevel = parseInt(startLevel)
 		    if (startLevel == undefined) {
 			startLevel = 0
 		    }
@@ -346,8 +347,7 @@
 		result.currentD = whichMatter(pretender.D, deathInput.value)
 		result.currentN = whichMatter(pretender.N, natureInput.value)
 		result.currentB = whichMatter(pretender.B, bloodInput.value)
-
-		result.pointsLeft = 500 - result.domCost - result.magicCost + discount - pretender.pointcost -
+		result.pointsLeft = 425 - result.domCost - result.magicCost + discount - pretender.pointcost -
 		    (parseInt(orderInput.value) + parseInt(productivityInput.value) +
 		     parseInt(growthInput.value) +
 		     parseInt(fortuneInput.value) + parseInt(magicInput.value)) * 40 +
